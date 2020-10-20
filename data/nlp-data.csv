@@ -1,71 +1,104 @@
-Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action
-Assign completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Started on Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Create new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-New task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb complete,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was completed,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Y new task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Completed a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Create X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb task created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Task Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y is in progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+assign completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+move X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X in progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+Create new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+New task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Y new task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Create new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+X is in progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+Start on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+assign In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+Task X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+assign X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+Review X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X task is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X task blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Task X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+Task X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+assign blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Finished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+Create new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Created new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Start task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Started on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Starting on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+,,,,,,
