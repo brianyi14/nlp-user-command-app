@@ -101,4 +101,3 @@ There is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
 X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
 Task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
 X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
-,,,,,,

@@ -1,767 +1,1105 @@
-Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action
-Assign completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Started on Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Create new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-New task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb complete,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was completed,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Y new task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Completed a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Create X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb task created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Task Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y is in progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-put completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-attribute completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-ascribe completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-delegate completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-designate completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign complete status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign accomplished status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign realized status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign consummated status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign completed condition to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Assign completed position to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-run X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-go X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-affect X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-strike X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-act X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Move X to consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-complete X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-accomplished X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-realized X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-consummated X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Started along Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started connected Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started happening Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on-duty Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on duty Xverb,Task,Xverb,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started along Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started connected Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started happening Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on-duty Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on duty Xtime now,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime immediately,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime nowadays,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime forthwith,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime today,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Started on Xtime directly,Task,Xtime,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y inch progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y internal progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y fashionable progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y stylish progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y inward progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y in build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-make new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create green task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create radical task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create baby task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create novel task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create hot task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new job called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new project called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new tax called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new labor called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new chore called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new task named X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new task titled X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new task known as X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-make task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-green task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-radical task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-baby task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-novel task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-hot task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New job Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New project Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New tax Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New labor Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New chore Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-X is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is immediately completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is nowadays completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is forthwith completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is today completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is directly completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-X is now consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-last completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-eventually completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-ultimately completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-lastly completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-at length completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally complete X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally accomplished X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally realized X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-Finally consummated X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-complete Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-accomplished Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-realized Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-consummated Xtime earlier,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime past,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime before,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime early,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime sooner,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-Completed Xtime originally,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-complete Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-accomplished Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-realized Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-consummated Xtime yesterday,Task,Xtime,Completed,"[1,0,0]","[0,0,0,0,1]"
-through with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-complete with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-done with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-polished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-ended with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb over,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb good,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb all,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb sound,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb thorough,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was complete,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was accomplished,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was realized,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Xverb was consummated,Task,Xverb,Completed,"[1,0,0]","[0,0,0,0,1]"
-Y green task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y radical task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y baby task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y novel task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y hot task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y new job,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y new project,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y new tax,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y new labor,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y new chore,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-green Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-radical Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-baby Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-novel Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-hot Y task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y job,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y project,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y tax,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y labor,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-New Y chore,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-make new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create green task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create radical task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create baby task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create novel task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create hot task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create new chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-make X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-complete a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-accomplished a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-realized a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-consummated a X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-complete an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-accomplished an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-realized an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-consummated an X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]"
-make X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X job,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X project,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X tax,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X labor,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Create X chore,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb job created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb project created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb tax created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb labor created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-Xverb chore created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-job Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-project Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-tax Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-labor Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-chore Xverb created,Task,Xverb,To Do,"[1,0,0]","[1,0,0,0,0]"
-green Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-radical Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-baby Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-novel Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-hot Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]"
-make X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-produce X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]"
-Y is inch progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is internal progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is fashionable progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is stylish progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is inward progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is in build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is in advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is in progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is in advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Y is in build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start along X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start connected X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start happening X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on-duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start along X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start connected X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start happening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on-duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start along task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start connected task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start happening task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on-duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-go on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-get on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-offset on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-begin on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-part on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start along X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start connected X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start happening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on-duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Start on X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate In Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inch Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign internal Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign fashionable Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign stylish Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inward Progress to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advance to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In progression to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advancement to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build up to Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate In Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inch Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign internal Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign fashionable Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign stylish Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inward Progress to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advance to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In progression to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advancement to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build up to Y task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y job,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y project,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y tax,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y labor,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to Y chore,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate In Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inch Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign internal Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign fashionable Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign stylish Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign inward Progress to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advance to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In progression to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In advancement to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In build up to task Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to job Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to project Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to tax Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to labor Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign In Progress to chore Y,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y job In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y project In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y tax In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y labor In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y chore In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign Y task In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-attribute task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-ascribe task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-delegate task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-designate task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign job Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign project Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign tax Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign labor Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign chore Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-Assign task Y In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]"
-put in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inch review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign internal review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign fashionable review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign stylish review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inward review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in survey to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in follow-up to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in critique to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in recap to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in refresh to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-job X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-project X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-tax X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-labor X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-chore X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X job is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X project is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X tax is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X labor is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X chore is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-put Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y inch review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y internal review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y fashionable review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y stylish review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y inward review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in survey,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in follow-up,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in critique,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in recap,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y in refresh,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-put task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate task Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign job Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign project Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign tax Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign labor Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign chore Y in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y inch review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y internal review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y fashionable review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y stylish review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y inward review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in survey,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in follow-up,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in critique,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in recap,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign task Y in refresh,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-put Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate Y task in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y job in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y project in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y tax in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y labor in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y chore in review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task inch review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task internal review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task fashionable review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task stylish review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task inward review,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in survey,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in follow-up,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in critique,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in recap,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign Y task in refresh,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-survey X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-follow-up X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-critique X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-recap X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-refresh X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-survey task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-follow-up task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-critique task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-recap task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-refresh task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review job X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review project X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review tax X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review labor X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review chore X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-survey X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-follow-up X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-critique X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-recap X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-refresh X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X job,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X project,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X tax,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X labor,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Review X chore,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X job review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X project review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X tax review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X labor review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X chore review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-X task refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-job X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-project X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-tax X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-labor X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-chore X review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-Task X refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]"
-put in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate in review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inch review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign internal review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign fashionable review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign stylish review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inward review to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in survey to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in follow-up to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in critique to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in recap to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in refresh to Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-put in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate in review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inch review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign internal review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign fashionable review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign stylish review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inward review to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in survey to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in follow-up to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in critique to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in recap to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in refresh to task Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to job Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to project Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to tax Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to labor Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to chore Y,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-put in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-attribute in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-ascribe in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-delegate in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-designate in review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inch review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign internal review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign fashionable review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign stylish review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign inward review to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in survey to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in follow-up to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in critique to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in recap to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in refresh to Y task,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y job,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y project,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y tax,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y labor,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-Assign in review to Y chore,Task,Y,In Review,"[1,0,0]","[0,0,1,0,0]"
-X closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-closed X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-obstructed X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-out of use X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X job is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X project is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X tax is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X labor is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X chore is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X job blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X project blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X tax blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X labor blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X chore blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-X task out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-job X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-project X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-tax X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-labor X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-chore X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-job X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-project X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-tax X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-labor X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-chore X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Task X out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-closed task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-obstructed task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-out of use task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked job X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked project X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked tax X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked labor X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked chore X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-closed X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-obstructed X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-out of use X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X job,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X project,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X tax,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X labor,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Blocked X chore,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]"
-put blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-attribute blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-ascribe blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-delegate blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-designate blocked to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign closed to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign obstructed to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign out of use to Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-put blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-attribute blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-ascribe blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-delegate blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-designate blocked to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign closed to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign obstructed to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign out of use to task Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to job Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to project Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to tax Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to labor Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to chore Y,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-put blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-attribute blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-ascribe blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-delegate blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-designate blocked to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign closed to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign obstructed to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign out of use to Y task,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y job,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y project,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y tax,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y labor,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
-Assign blocked to Y chore,Task,Y,Blocked,"[1,0,0]","[0,0,0,1,0]"
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+assign completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+move X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X in progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+Create new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+New task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Y new task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Create new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+X is in progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+Start on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+assign In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+Task X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+assign X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+Review X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+assign in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X task is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X task blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Task X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+Task X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+assign blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Finished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+Create new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Created new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Start task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Started on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Starting on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+put completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+attribute completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+ascribe completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+delegate completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+designate completed status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign complete status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign accomplished status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign realized status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign consummated status to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign completed condition to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+assign completed position to X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",assign
+run X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+go X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+affect X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+strike X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+act X to completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+move X to complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+move X to accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+move X to realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+move X to consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",move
+X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+complete X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+accomplished X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+realized X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+consummated X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X inch progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X internal progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X fashionable progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X stylish progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X inward progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X in build,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X in advance,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X in progression,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X in advancement,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X in build up,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+make new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce new task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create green task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create radical task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create baby task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create novel task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create hot task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new job called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new project called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new tax called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new labor called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new chore called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new task named X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new task titled X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new task known as X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+make task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+green task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+radical task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+baby task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+novel task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+hot task Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+New job Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+New project Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+New tax Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+New labor Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+New chore Y,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+X is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Y green task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y radical task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y baby task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y novel task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y hot task,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y new job,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y new project,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y new tax,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y new labor,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+Y new chore,Task,Y,To Do,"[1,0,0]","[1,0,0,0,0]",None
+make new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce new task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create green task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create radical task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create baby task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create novel task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create hot task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+make X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+make X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X job,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X project,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X tax,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X labor,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create X chore,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+X is inch progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is internal progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is fashionable progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is stylish progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is inward progress,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is in build,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is in advance,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is in progression,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is in advancement,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+X is in build up,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",progress
+go on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start along X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start connected X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start happening X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on-duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+go X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+go on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start along X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start connected X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start happening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on-duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+go X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+go on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start along task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start connected task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start happening task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on-duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start on chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+put In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate In Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inch Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign internal Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign fashionable Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign stylish Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inward Progress to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advance to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In progression to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advancement to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build up to X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to cardinal,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to decade,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to ten,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to 10,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to tenner,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate In Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inch Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign internal Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign fashionable Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign stylish Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inward Progress to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advance to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In progression to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advancement to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build up to X task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to cardinal task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to decade task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to ten task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to 10 task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to tenner task,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X job,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X project,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X tax,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X labor,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to X chore,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate In Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inch Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign internal Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign fashionable Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign stylish Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign inward Progress to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advance to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In progression to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In advancement to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In build up to task X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to job X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to project X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to tax X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to labor X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to chore X,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task cardinal,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task decade,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task ten,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task 10,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign In Progress to task tenner,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate Y task In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y job In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y project In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y tax In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y labor In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y chore In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign Y task In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+attribute task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+ascribe task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+delegate task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+designate task Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign job Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign project Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign tax Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign labor Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign chore Y In Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y inch Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y internal Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y fashionable Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y stylish Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y inward Progress,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In build,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In advance,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In progression,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In advancement,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+assign task Y In build up,Task,Y,In Progress,"[1,0,0]","[0,1,0,0,0]",assign
+put in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inch review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign internal review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign fashionable review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign stylish review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inward review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in survey to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in follow-up to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in critique to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in recap to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in refresh to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+job X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+project X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+tax X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+labor X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+chore X is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X job is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X project is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X tax is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X labor is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X chore is in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task is in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+put X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+put task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate task X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign job X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign project X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign tax X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign labor X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign chore X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign task X in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+put X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate X task in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X job in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X project in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X tax in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X labor in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X chore in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign X task in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+survey X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+follow-up X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+critique X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+recap X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+refresh X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+survey task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+follow-up task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+critique task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+recap task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+refresh task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review job X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review project X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review tax X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review labor X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review chore X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+survey X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+follow-up X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+critique X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+recap X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+refresh X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X job,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X project,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X tax,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X labor,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+Review X chore,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",review
+put in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate in review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inch review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign internal review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign fashionable review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign stylish review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inward review to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in survey to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in follow-up to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in critique to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in recap to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in refresh to X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+put in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate in review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inch review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign internal review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign fashionable review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign stylish review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inward review to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in survey to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in follow-up to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in critique to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in recap to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in refresh to task X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to job X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to project X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to tax X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to labor X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to chore X,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+put in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+attribute in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+ascribe in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+delegate in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+designate in review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inch review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign internal review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign fashionable review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign stylish review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign inward review to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in survey to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in follow-up to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in critique to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in recap to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in refresh to X task,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X job,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X project,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X tax,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X labor,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+assign in review to X chore,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",assign
+X closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+closed X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+obstructed X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+out of use X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X job is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X project is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X tax is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X labor is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X chore is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X task is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X task is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X task is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+X job blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X project blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X tax blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X labor blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X chore blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X task closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X task obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+X task out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+job X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+project X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+tax X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+labor X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+chore X is blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+Task X is closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+Task X is obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+Task X is out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",is
+job X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+project X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+tax X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+labor X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+chore X blocked,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Task X closed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Task X obstructed,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Task X out of use,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+closed task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+obstructed task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+out of use task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked job X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked project X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked tax X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked labor X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked chore X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+closed X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+obstructed X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+out of use X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X job,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X project,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X tax,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X labor,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+Blocked X chore,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",blocked
+put blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+attribute blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+ascribe blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+delegate blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+designate blocked to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign closed to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign obstructed to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign out of use to X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+put blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+attribute blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+ascribe blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+delegate blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+designate blocked to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign closed to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign obstructed to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign out of use to task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to job X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to project X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to tax X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to labor X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to chore X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+put blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+attribute blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+ascribe blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+delegate blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+designate blocked to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign closed to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign obstructed to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign out of use to X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X job,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X project,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X tax,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X labor,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+assign blocked to X chore,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",assign
+X was over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X was thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X is over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X is thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+job X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+project X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+tax X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+labor X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+chore X completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Task X consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X job completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X project completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X tax completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X labor completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X chore completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+X task consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+complete task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+accomplished task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+realized task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+consummated task X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed job X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed project X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed tax X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed labor X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed chore X,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+complete X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+accomplished X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+realized X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+consummated X task,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X job,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X project,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X tax,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X labor,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+Completed X chore,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",completed
+job X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+project X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+tax X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+labor X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+chore X is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X job is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X project is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X tax is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X labor is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X chore is completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+job X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+project X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+tax X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+labor X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+chore X complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+Task X thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X job complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X project complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X tax complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X labor complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X chore complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+X task thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",None
+job X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+project X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+tax X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+labor X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+chore X was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X job was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X project was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X tax was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X labor was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X chore was completed,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was accomplished,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was realized,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was consummated,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X job was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X project was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X tax was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X labor was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X chore was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+X task was thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+job X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+project X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+tax X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+labor X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+chore X was complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+Task X was thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",was
+job X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+project X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+tax X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+labor X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+chore X is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+Task X is thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X job is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X project is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X tax is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X labor is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X chore is complete,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is over,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is good,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is all,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is sound,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+X task is thorough,Task,X,Completed,"[1,0,0]","[0,0,0,0,1]",is
+through with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+complete with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+done with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+polished with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+ended with Y,Task,Y,Completed,"[1,0,0]","[0,0,0,0,1]",finished
+make new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce new X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create green X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create radical X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create baby X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create novel X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create hot X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+make new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce new X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create green X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create radical X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create baby X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create novel X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create hot X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X job,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X project,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X tax,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X labor,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create new X chore,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+make task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+produce task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create job called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create project called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create tax called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create labor called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create chore called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task named X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task titled X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Create task known as X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",create
+Created green task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created radical task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created baby task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created novel task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created hot task called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new job called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new project called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new tax called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new labor called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new chore called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new task named X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new task titled X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new task known as X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created green task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created radical task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created baby task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created novel task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created hot task X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new job X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new project X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new tax X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new labor X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new chore X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X job,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X project,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X tax,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X labor,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created X chore,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created green X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created radical X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created baby X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created novel X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created hot X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created green X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created radical X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created baby X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created novel X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created hot X task,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X job,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X project,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X tax,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X labor,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created new X chore,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created job called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created project called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created tax called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created labor called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created chore called X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task named X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task titled X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+Created task known as X,Task,X,To Do,"[1,0,0]","[1,0,0,0,0]",created
+go task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+get task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+offset task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+begin task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+part task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Start chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",start
+Started along X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started connected X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started happening X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on-duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started along X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started connected X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started happening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on-duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started along task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started connected task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started happening task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on-duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started on chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+Started chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",started
+start on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive on X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting along X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting connected X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting happening X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on-duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on duty X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+start X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+start on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive on X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting along X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting connected X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting happening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on-duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on duty X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+start X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive X task,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X job,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X project,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X tax,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X labor,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting X chore,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+start on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive on task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting along task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting connected task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting happening task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on-duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on duty task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting on chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+start task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+opening task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+protrusive task X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting job X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting project X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting tax X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting labor X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+Starting chore X,Task,X,In Progress,"[1,0,0]","[0,1,0,0,0]",starting
+job with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+trouble with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+thither is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that respect is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+at that place is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+on that point is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that location is a problem with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a job with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a trouble with X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+job with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+trouble with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with job X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with project X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with tax X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with labor X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with chore X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+job with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+trouble with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X job,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X project,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X tax,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X labor,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+Problem with X chore,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+thither is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that respect is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+at that place is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+on that point is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that location is a problem with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a job with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a trouble with task X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with job X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with project X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with tax X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with labor X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with chore X,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+thither is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that respect is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+at that place is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+on that point is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+in that location is a problem with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a job with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a trouble with X task,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X job,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X project,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X tax,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X labor,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+There is a problem with X chore,Task,X,Blocked,"[1,0,0]","[0,0,0,1,0]",problem
+X inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+job X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+project X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+tax X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+labor X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+chore X in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+Task X in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X job in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X project in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X tax in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X labor in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X chore in review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task inch review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task internal review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task fashionable review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task stylish review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task inward review,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in survey,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in follow-up,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in critique,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in recap,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
+X task in refresh,Task,X,In Review,"[1,0,0]","[0,0,1,0,0]",in review
