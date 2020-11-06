@@ -1,0 +1,340 @@
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+assign completed status to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+move x to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
+x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+completed x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+create new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
+assign in review to x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign blocked to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+x is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",comlete
+x was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x new task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
+create new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+x is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+x task is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+task x is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+in progress x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+in progress task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+in progress x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+start on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+start x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+start on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+start x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+start on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+assign in progress to x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign in progress to x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign in progress to task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign in review to task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign in review to x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+x is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+task x is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+x task is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+assign blocked to task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign blocked to x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+blocked x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+x task blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+task x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+blocked task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+blocked x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+x is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+x task is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+task x is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+x was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+completed task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+completed x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+task x is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x task is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+task x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x task was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+x task was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+task x was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+task x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+finished with x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finished
+create new x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+created new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created new x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+start task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+started on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+started x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+started on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+started x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+started on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+started task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+starting on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+starting x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+starting on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+starting x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+starting on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+starting task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+problem with x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+there is a problem with x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+problem with x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+there is a problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+there is a problem with x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+review x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+review task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+review x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+x review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+task x review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+x task review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+in review x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+in review task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+in review x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+create new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+create project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+x new project,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+create new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+create x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+create new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+create project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+created new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+created project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+created new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+created x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+created new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+created project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+project x completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+x project completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+completed project x,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+completed x project,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+project x is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+x project is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+project x complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+x project complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+project x was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+x project was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+x project was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+project x was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+project x is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+x project is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+assign danger to x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign danger to project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign danger to x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+x project danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+project x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+x is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+x project is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+project x is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+problem with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+problem with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+there is a problem with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+there is a problem with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+x project is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+project x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+assign at risk to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign at risk to project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign at risk to x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+project x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x project is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+risk x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+risk project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+risk x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+x risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+project x risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+x project risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+at risk x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+at risk project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+at risk x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+assign on target to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign on target to x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign on target to task x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x project is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+project x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x project on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x project is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+i have a problem with my project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+created a new study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+assign x projects to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+i have a problem with my x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+started x activities,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign risk to project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+create a project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+project x issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign to x in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+about x on target projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x subject review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+create a new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+assign risky x projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x subject is under consideration,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+the x project is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+start x project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+dangers of x projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign x to targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create a new study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+about the target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+the investigation is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+created a new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+review study,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+ongoing x tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+blocked x tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x on new tasks,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+project x is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+start of x project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+survey of completed tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign to risky x projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+create a new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+completed project survey,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+create a x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+review of x tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+completed x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+finished x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+i have a problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+task investigation completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign to task survey in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign to ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+created project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+schedule survey,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+task survey review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+ongoing task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+about target x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project x is at stake,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+created task survey,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+a created task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+project x on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign to x tasks in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+create a new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+study blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x project is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x agenda is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign risks to x projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+orbital project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+move the study to completion,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+assign risk to x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+task x is under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+take risks and assign to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+assign goals to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x projects get back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+in a review study,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+assign completion status to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+assign blocks to x tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign blocks to task surveys,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+created a new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+x is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create a task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+created a new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x projects are at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project x is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create a x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x projects are at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign goals to task x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+risky project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+create a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+task x issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign an ongoing task survey,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+i have a problem with my x topic,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+i created a project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+assign goals to x projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign x tasks under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+the study created,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+assign ongoing x tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+start a x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+in review x tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+dangers of project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign to an ongoing x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+x projects at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+created a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+assign project x to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign to ongoing task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+x projects are dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+start a task survey,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+start of task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+x projects on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x is at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+created a new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+risky x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+create a new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+create a new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+created a new task study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+as planned x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+i have a problem with my x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+study on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+task investigation is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x subject completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+project x is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign blocks to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x subject issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x topics under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x project issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x is under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+study new tasks,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+x under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
