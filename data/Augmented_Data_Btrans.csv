@@ -1,340 +1,337 @@
 Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
-assign completed status to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
-move x to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
-x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-completed x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-create new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-create task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
-assign in review to x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-assign blocked to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
-x is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",comlete
-x was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x new task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
-create new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-create x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-create x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-x is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-x task is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-task x is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-in progress x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-in progress task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-in progress x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
-start on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-start x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-start on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-start x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-start on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-assign in progress to x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign in progress to x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign in progress to task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
-assign x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-assign task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-assign x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-assign in review to task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-assign in review to x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
-x is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-task x is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-x task is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-assign blocked to task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
-assign blocked to x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
-x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-blocked x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-x task blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-task x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-blocked task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-blocked x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
-x is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
-x task is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
-task x is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
-x was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-task x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-completed task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-completed x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-task x is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x task is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-task x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-x task complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-task x was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x task was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-x task was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-task x was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
-task x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-x task is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
-finished with x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finished
-create new x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-create new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-create task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
-created new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created new x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-created task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
-start task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
-started on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-started x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-started on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-started x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-started on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-started task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
-starting on x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-starting x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-starting on x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-starting x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-starting on task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-starting task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
-problem with x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-there is a problem with x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-problem with x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-there is a problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-there is a problem with x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
-review x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-review task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-review x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-x review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-task x review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-x task review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
-in review x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-in review task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-in review x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
-create new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-create project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
-x new project,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
-create new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-create x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-create new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-create project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
-created new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-created project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-created new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-created x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-created new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-created project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
-project x completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-x project completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-completed project x,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-completed x project,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-project x is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-x project is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-project x complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
-x project complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
-project x was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-x project was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-x project was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-project x was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
-project x is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
-x project is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
-assign danger to x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
-assign danger to project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
-assign danger to x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
-x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-danger x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-x project danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-project x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-danger project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-danger x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
-x is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-x project is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-project x is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-problem with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
-problem with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
-there is a problem with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
-there is a problem with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
-x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-x project is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-project x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
-assign at risk to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-assign x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-assign project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-assign x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-assign at risk to project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-assign at risk to x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
-x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-project x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-x project is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-risk x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-risk project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-risk x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-x risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-project x risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-x project risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
-at risk x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-at risk project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-at risk x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
-assign on target to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-assign on target to x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-assign on target to task x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-assign x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-assign x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-assign project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
-x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-x project is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-project x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-on target x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-on target project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-on target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
-x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-project x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-x project on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-project x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-x project is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
-x back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-project x back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x project back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-project x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x project is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-project x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x project on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-project x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-x project is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
-i have a problem with my project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-created a new study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-assign x projects to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-i have a problem with my x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-started x activities,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-assign risk to project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-create a project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-project x issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-assign to x in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-about x on target projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-x subject review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-create a new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-assign risky x projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-x subject is under consideration,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-the x project is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-start x project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-dangers of x projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-assign x to targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-create a new study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-about the target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-the investigation is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-created a new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-x is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+blocked Track trends task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+task Track trends blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+assign risks to Track trends projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+create a new task Track trends,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+project Track trends on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+about the target Track trends project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create Track trends,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+start of task Track trends,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+completed Track trends task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+Track trends task is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+finished with Track trends,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finished
+create new Track trends task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+task Track trends complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project Track trends is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+review task Track trends,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+project Track trends is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+start Track trends,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
 review study,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-ongoing x tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-blocked x tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-x on new tasks,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-project x is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-project survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
-start of x project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-assign ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-survey of completed tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign to risky x projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-create a new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-completed project survey,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
-create a x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-review of x tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-completed x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-finished x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-i have a problem with task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-task investigation completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-x on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign to task survey in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-assign to ongoing x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-created project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-schedule survey,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-task survey review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-ongoing task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-about target x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-project x is at stake,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-created task survey,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-a created task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-project x on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign to x tasks in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-create a new task x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-study blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-x project is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-x agenda is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-assign risks to x projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-orbital project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-move the study to completion,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
-assign risk to x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-task x is under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-take risks and assign to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-assign goals to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-x projects get back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+dangers of Track trends projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign task Track trends in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+risky project Track trends,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project Track trends issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+created a new task called Track trends,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+on target Track trends project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+task Track trends is under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign ongoing Track trends tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+project Track trends on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+created new task called Track trends,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+create a task called Track trends,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+ongoing Track trends,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+problem with Track trends task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+Track trends review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+Track trends task is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+assign risk to project Track trends,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+task Track trends issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+project Track trends at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+task Track trends completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+Track trends subject issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign at risk to Monitor competition project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+created Monitor competition,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created new Monitor competition project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+Monitor competition is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+Monitor competition is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+a created task called Monitor competition,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+there is a problem with task Monitor competition,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+project Monitor competition complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+assign danger to Monitor competition project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
 in a review study,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-x issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
-assign completion status to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-assign blocks to x tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-assign blocks to task surveys,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-created a new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-x is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-create a task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-created a new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-x projects are at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-project x is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-create a x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-x projects are at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-assign goals to task x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-risky project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-create a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-task x issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+task Monitor competition is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+create a new Monitor competition project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+problem with task Monitor competition,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+review of Monitor competition tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+Monitor competition blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
 assign an ongoing task survey,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-i have a problem with my x topic,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-i created a project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-assign goals to x projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign x tasks under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-the study created,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-assign ongoing x tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-start a x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-in review x tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-dangers of project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-assign to an ongoing x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-x projects at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-created a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-assign project x to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign to ongoing task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-x projects are dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-start a task survey,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-start of task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
-x projects on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-x is at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-created a new task called x,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-risky x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
-create a new project called x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
-create a new x task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-created a new task study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-as planned x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-i have a problem with my x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+Monitor competition project complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+Monitor competition is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Monitor competition at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+new task Monitor competition,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
+create task Monitor competition,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+task Monitor competition was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+project Monitor competition is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+in progress Monitor competition,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+Monitor competition project is completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+task Monitor competition is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+there is a problem with Monitor competition,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+risk Monitor competition,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+Monitor competition was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+ongoing task Monitor competition,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+Monitor competition is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+i have a problem with my Monitor competition,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+started task Monitor competition,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+assign risk to Monitor competition,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project Monitor competition on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+danger Monitor competition project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+assign danger to Monitor competition,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign at risk to Monitor competition,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign to risky Plan campaign projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project Plan campaign is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+i created a project called Plan campaign,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+Plan campaign is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+move Plan campaign to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
+Plan campaign agenda is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign in review to Plan campaign,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+Plan campaign subject review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign to Plan campaign tasks in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+create new Plan campaign project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+assign to task survey in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign Plan campaign to targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Plan campaign is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+created a new project called Plan campaign,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
 study on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create new task called Plan campaign,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+assign Plan campaign in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+Plan campaign projects are dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+at risk Plan campaign,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+assign Plan campaign task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+Plan campaign project is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+starting on task Plan campaign,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+created task called Plan campaign,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+risk Plan campaign project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+new project Plan campaign,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+Plan campaign projects are at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+task Plan campaign in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+Plan campaign project on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project Plan campaign on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+assign to Plan campaign in reviews,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+project Plan campaign is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+Plan campaign subject is under consideration,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+created a new study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+started Plan campaign task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+created new project called Plan campaign,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+Plan campaign project was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+completed task survey,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+about Plan campaign on target projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Direct marketing task is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
 task investigation is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-x subject completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
-project x is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
-assign blocks to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-x subject issues,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
-x topics under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-x project issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
-x is under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
-study new tasks,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
-x under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+Direct marketing projects on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project Direct marketing was completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+the investigation is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+start on task Direct marketing,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+created new project Direct marketing,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+Direct marketing task is in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+Direct marketing task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+project Direct marketing back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+Direct marketing issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+Direct marketing on new tasks,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+started on Direct marketing task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+assign Direct marketing project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+start on Direct marketing task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+Direct marketing is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+Direct marketing danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+project Direct marketing is complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",complete
+there is a problem with project Direct marketing,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+danger Direct marketing,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+create a Direct marketing project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+Direct marketing project is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+assign task Direct marketing in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+the Direct marketing project is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Direct marketing risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+Direct marketing project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+Direct marketing is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+Direct marketing in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+Direct marketing project is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+Direct marketing project completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+target Direct marketing project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+in review Direct marketing,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+Direct marketing is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+ongoing Direct marketing tasks,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+Direct marketing task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+Direct marketing project is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+created task Direct marketing,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+task Market research was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+on target Market research,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+assign goals to Market research,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+create a new project called Market research,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+project Market research is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+created project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+created new Market research,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+Market research topics under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+create new project Market research,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+Market research on targets,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign project Market research to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Market research task review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+blocked Market research tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+there is a problem with Market research project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+Market research project is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+create Market research task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+create new Market research,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+task Market research review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+assign risky Market research projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+assign Market research projects to goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project Market research was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+Market research in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+starting Market research task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+i have a problem with my project Market research,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+Market research task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+Market research task complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+problem with project Market research,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+at risk Market research project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+i have a problem with task Market research,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+Market research is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+created a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+assign in review to Market research task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+as planned Market research project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Market research new task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",new
+review Market research task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+finished Market research,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completed Market research,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+the study created,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+created Social media advertising project,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+in progress Social media advertising task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+assign in progress to Social media advertising,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+create task called Social media advertising,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+Social media advertising on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+assign on target to task Social media advertising,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign to an ongoing Social media advertising task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign Social media advertising tasks under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+started Social media advertising activities,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+task Social media advertising in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+assign completion status to Social media advertising,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+i have a problem with my Social media advertising topic,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign on target to Social media advertising,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign goals to task Social media advertising,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+created new task Social media advertising,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+Social media advertising task blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+Social media advertising completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+Social media advertising complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",comlete
+there is a problem with Social media advertising task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+create a new study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+start task Social media advertising,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+Social media advertising is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+completed project survey,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+Social media advertising is at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+Social media advertising was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+Social media advertising is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+create new task Social media advertising,Task,x,To Do,"[1,0]","[1,0,0,0,0]",create
+problem with Social media advertising project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem
+blocked Social media advertising,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+Social media advertising on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+task survey review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+start a task survey,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+orbital project Social media advertising,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Social media advertising subject completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+created project Social media advertising,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+create a project called Social media advertising,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+take risks and assign to Advertise product,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+completed task Advertise product,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+assign ongoing Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+study blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+completed project Advertise product,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+assign project Advertise product on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+in progress task Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",in progress
+Advertise product is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign Advertise product project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+Advertise product task is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+create new project called Advertise product,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+Advertise product project was complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+completed Advertise product tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+i have a problem with my Advertise product project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project Advertise product is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+danger project Advertise product,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+start Advertise product project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+in review task Advertise product,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+Advertise product project back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+Advertise product projects get back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+starting task Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+project Advertise product is at stake,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+starting on Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+assign to ongoing Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign Advertise product at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign Advertise product in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+Advertise product project risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+in review Advertise product task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+assign completed status to Advertise product,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+starting Advertise product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+in review Advertise product tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+starting on Advertise product task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",starting
+created a new task study,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+Advertise product project is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+Advertise product task was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+assign blocked to Advertise product task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+project Advertise product is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+create a new task called Promote product,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+project Promote product danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+assign danger to project Promote product,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+at risk project Promote product,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+completed Promote product project,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+create a new project study,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+Promote product project issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+schedule survey,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Promote product back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+created new Promote product task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+create project called Promote product,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+assign blocks to Promote product tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+start a Promote product task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+started on task Promote product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+created Promote product task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",created
+created task survey,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+create Promote product project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+task Promote product is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",is
+task investigation completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+Promote product projects are at stake,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+task Promote product is in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",in review
+review Promote product,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+Promote product project is achieving its goals,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project Promote product is proceeding smoothly,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign Promote product task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+blocked task Promote product,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",blocked
+created a new Promote product task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+project Promote product completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",completed
+start Promote product task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+assign on target to Promote product project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign project Promote product at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+Promote product is danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",is
+start of Promote product project,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+Promote product project is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+assign in progress to Promote product task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign in progress to task Promote product,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+created project called Promote product,Project,x,Create,"[0,1]","[1,0,0,0,0]",created
+assign Evaluate profit margins on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+Evaluate profit margins projects at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+assign blocks to task surveys,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign goals to Evaluate profit margins projects,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+Evaluate profit margins project danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+dangers of project Evaluate profit margins,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project Evaluate profit margins risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+problem with Evaluate profit margins,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",problem
+Evaluate profit margins on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project survey completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+create project Evaluate profit margins,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+about target Evaluate profit margins,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+task Evaluate profit margins is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+start on Evaluate profit margins,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",start
+assign at risk to project Evaluate profit margins,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+risky Evaluate profit margins,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+risk project Evaluate profit margins,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",risk
+assign blocks to Evaluate profit margins,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign in review to task Evaluate profit margins,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+project Evaluate profit margins is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+assign to ongoing task Evaluate profit margins,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+started Evaluate profit margins,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+Evaluate profit margins task was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",completed
+started on Evaluate profit margins,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",started
+created a new Evaluate profit margins project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+project Evaluate profit margins is dangerous,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+move the study to completion,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+Evaluate profit margins project on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+assign blocked to Evaluate profit margins,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+on target project Evaluate profit margins,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+create a Evaluate profit margins task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+create a new Evaluate profit margins task,Task,x,To Do,"[1,0]","[1,0,0,0,0]",BACKTRANSLATED
+Evaluate profit margins project is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+Evaluate profit margins new project,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+assign blocked to task Evaluate profit margins,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+Evaluate profit margins project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
