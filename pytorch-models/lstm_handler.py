@@ -12,7 +12,7 @@ from gensim import models
 import gensim.downloader as api
 from spellchecker import SpellChecker
 
-path = api.load("word2vec-google-news-300", return_path=True)
+#path = api.load("word2vec-google-news-300", return_path=True)
 
 class ModelHandler(BaseHandler):
   
@@ -35,7 +35,7 @@ class ModelHandler(BaseHandler):
       word = sentence_lst[i]
       if word not in stopwords:
         try:
-          vectorized_word = vectorizer.wv[word]
+          vectorized_word = np.zeros(300)
         except KeyError:
           misspelled = spell_checker.unknown([word])
           corrected_word = None
@@ -54,7 +54,7 @@ class ModelHandler(BaseHandler):
     return sentence_vector
 
   def preprocess(self, sentence):
-    w = models.KeyedVectors.load_word2vec_format(path, binary=True)
+    #w = models.KeyedVectors.load_word2vec_format(path, binary=True)
     vectorized_sentence = self.vectorize_sentence(sentence,w)
     tensor_sentence = torch.tensor(vectorized_sentence)
     model_input = torch.unsqueeze(vectorized_sentence,0)
