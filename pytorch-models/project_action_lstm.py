@@ -27,8 +27,8 @@ class TopicModeler(nn.Module):
 
   #function for forward pass through model
   def forward(self,input):
-    output, (h_n,c_n) = self.LSTM(input)
+    #output, (h_n,c_n) = self.LSTM(input)
     #input last hidden state through linear layer
-    topic_output = self.output2topic(h_n)
-    prob_output = self.softmax(topic_output)
-    return prob_output
+    #topic_output = self.output2topic(h_n)
+    #prob_output = self.softmax(topic_output)
+    return input
