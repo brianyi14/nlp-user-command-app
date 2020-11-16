@@ -1,13 +1,14 @@
 from ts.torch_handler.base_handler import BaseHandler
 import torch
 from torch import nn
+
 #from gensim import models
 #import gensim.downloader as api
 #from spellchecker import SpellChecker
 
 #path = api.load("word2vec-google-news-300", return_path=True)
-
 class ModelHandler(BaseHandler):
+"""
   def clean_sentence(self,sentence):
     cleaned_sentence = ''
     for char in sentence:
@@ -44,6 +45,7 @@ class ModelHandler(BaseHandler):
     for j in range(num_words,10,1):
       sentence_vector[j] = np.zeros(300)
     return sentence_vector
+"""
     
 
   def preprocess(self, data):
