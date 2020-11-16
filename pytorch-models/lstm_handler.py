@@ -20,4 +20,4 @@ class ModelHandler(BaseHandler):
   def postprocess(self,model_pred):
     index2label = {0: 'Create',1: 'On Target',2: 'At Risk',3: 'Danger',4: 'Completed'}
     pred = index2label[int(torch.argmax(model_pred,dim=-1))]
-    return {"pred":pred}
+    return 1
