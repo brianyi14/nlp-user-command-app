@@ -9,7 +9,7 @@ class SimpleModel(nn.Module):
     self.softmax = nn.LogSoftmax(dim=-1)
 
   def forward(self,x):
-    outputo = self.llayer(x)
-    outputt = self.outputtopic(outputo)
+    outputo, (h_n,c_n) = self.llayer(x)
+    outputt = self.outputtopic(h_n)
     prob_output = self.softmax(outputt)
     return prob_output
