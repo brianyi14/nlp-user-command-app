@@ -1,0 +1,40 @@
+git clone https://github.com/brianyi14/nlp-user-command-app
+
+gcloud beta artifacts repositories create getting-started-pytorch \
+ --repository-format=docker \
+ --location=us-east1
+
+cat > Dockerfile <<END
+FROM pytorch/torchserve:0.2.0-cpu
+
+COPY project_action_lstm.py project_action_trained.pt lstm_handler.py configuration.properties requirements.txt /home/model-server/
+
+
+RUN torch-model-archiver \
+  --model-name=lstm \
+  --version=1.0 \
+  --model-file=/home/model-server/project_action_lstm.py \
+  --serialized-file=/home/model-server/project_action_trained.pt \
+  --handler=/home/model-server/lstm_handler.py \
+  --export-path=/home/model-server/model-store \
+  --requirements-file=/home/model-server/requirements.txt
+
+CMD ["torchserve", \
+     "--start", \ 
+     "--ts-config=/home/model-server/configuration.properties", \
+     "--models", \
+     "lstm=lstm.mar"]
+     
+
+END
+
+docker build \
+  --tag=us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm \
+  .
+  
+docker run -d -p 8081:8081 --name=local_lstm \
+  us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
+  
+curl localhost:8080/ping
+  
+curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
