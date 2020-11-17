@@ -17,11 +17,12 @@ class ModelHandler(BaseHandler):
     	#if char == '-':
       		#cleaned_sentence += ' '
     #spell_checker = SpellChecker()
-  	sentence_lst = data.split()
+	sentence = data.get("data")
+  	sentence_lst = sentence.split()
   	num_words = len(sentence_lst)
   	sentence_vector = np.zeros((max_len,300))
   	for i in range(num_words):
-    	word = sentence_lst[i]
+		word = sentence_lst[i]
     	if word not in stopwords:
     		vectorized_word = np.random.rand(300)
       		#try:
