@@ -1,9 +1,18 @@
+#clone the github repository with pytorch files 
 git clone https://github.com/brianyi14/nlp-user-command-app
 
+#change directory to access cloned files
+cd nlp-user-command-app/pytorch-models
+
+#create Google Cloud artifact repository which will contain models
 gcloud beta artifacts repositories create getting-started-pytorch \
  --repository-format=docker \
  --location=us-east1
 
+#Dockerfile which will run the torchserve model archiver. This file instructs Docker to run
+#a container that packages the different files into a model archive file(.mar). It then runs
+#a command which starts the torchserve server using the configuration file we have created
+#and the model archive file that was just created
 cat > Dockerfile <<END
 FROM pytorch/torchserve:0.2.0-cpu
 
@@ -28,13 +37,23 @@ CMD ["torchserve", \
 
 END
 
+#build the docker container using the supplied Dockerfile
 docker build \
   --tag=us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm \
   .
-  
-docker run -d -p 8081:8081 --name=local_lstm \
+
+#start the local torchserve server on ports 8080 and 8081 using the built docker container. Port
+#8080 handles client requests for model predictions. Port 8081 handles requests to change model
+#server parameters 
+docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
   us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
-  
+
+#ping the server which tells you whether there is something wrong with the archived file.
+#An unhealthy response means there is some error in one of the files supplied to the model 
+#archiver. A healthy response means the files are correctly formatted. 
 curl localhost:8080/ping
+
+#set the minimum number of workers for the model so it can make predictions
+curl -v -X PUT "http://localhost:8081/models/lstm?min_worker=3&synchronous=true"
   
 curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm

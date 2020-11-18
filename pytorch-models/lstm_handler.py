@@ -17,14 +17,14 @@ class ModelHandler(BaseHandler):
     	#if char == '-':
       		#cleaned_sentence += ' '
     #spell_checker = SpellChecker()
-	sentence = data.get("data")
-  	sentence_lst = sentence.split()
-  	num_words = len(sentence_lst)
-  	sentence_vector = np.zeros((max_len,300))
-  	for i in range(num_words):
-		word = sentence_lst[i]
-    	if word not in stopwords:
-    		vectorized_word = np.random.rand(300)
+	#sentence = data.get("data")
+  	#sentence_lst = sentence.split()
+  	#num_words = len(sentence_lst)
+  	#sentence_vector = np.zeros((max_len,300))
+  	#for i in range(num_words):
+		#word = sentence_lst[i]
+    	#if word not in stopwords:
+    		#vectorized_word = np.random.rand(300)
       		#try:
         		#vectorized_word = w.wv[word]
       		#except KeyError:
@@ -36,14 +36,14 @@ class ModelHandler(BaseHandler):
           		#vectorized_word = w.wv[corrected_word]
         	#except KeyError:
           		#vectorized_word = np.zeros(300)
-    	else:
+    	#else:
       	#stop word is empty vector of 0s
-      		vectorized_word = np.zeros(300)
-    	sentence_vector[i] = vectorized_word
-  		for j in range(num_words,max_len,1):
-    		sentence_vector[j] = np.zeros(300)
-    tensor_sentence = torch.tensor(sentence_vector)
-    model_input = torch.unsqueeze(tensor_sentence,0)
+      		#vectorized_word = np.zeros(300)
+    	#sentence_vector[i] = vectorized_word
+  		#for j in range(num_words,max_len,1):
+    		#sentence_vector[j] = np.zeros(300)
+    #tensor_sentence = torch.tensor(sentence_vector)
+    model_input = torch.randn(1,10,300)
     model_input = model_input.float()
     return model_input
 
