@@ -5,8 +5,8 @@ from sentence_vectorizer import vectorize_sentence
 
 class ModelHandler(BaseHandler):
   def preprocess(self, data):
-	  sentence = data.get("data")
-  	return sentence_vectorizer(sentence)
+	  #sentence = data.get("data")
+  	return torch.zeros(1,10,300)
 
   def postprocess(self, model_pred):
     index2label = {0: 'Create',1: 'On Target',2: 'At Risk',3: 'Danger',4: 'Completed'}

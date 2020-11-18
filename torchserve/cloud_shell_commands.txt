@@ -16,7 +16,7 @@ gcloud beta artifacts repositories create getting-started-pytorch \
 cat > Dockerfile <<END
 FROM pytorch/torchserve:0.2.0-cpu
 
-COPY project_action_lstm.py project_action_trained.pt project_action_handler.py sentence_vectorizer.py configuration.properties requirements.txt /home/model-server/
+COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py sentence_vectorizer.py configuration.properties requirements.txt /home/model-server/
 
 
 RUN torch-model-archiver \
@@ -49,6 +49,8 @@ docker build \
 docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
   us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 
+
+
 #ping the server which tells you whether there is something wrong with the archived model.
 #An unhealthy response means there is some error in one of the files supplied to the model 
 #archiver. A healthy response means the files are correctly formatted. 
@@ -57,7 +59,21 @@ curl localhost:8080/ping
 curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 
 #set the minimum number of workers for the model so it can make predictions
-curl -v -X PUT localhost:8081/models/lstm?min_worker=1
-curl -v -X PUT localhost:8081/models/lstm?min_worker=1&synchronous=true
+curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1
+curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1&number_gpu=1&synchronous=true
   
-curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
+curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/predictions/lstm
+
+docker push us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
+
+
+gcloud beta ai-platform versions create v1 \
+  --region=us-east1 \
+  --model=getting_started_pytorch \
+  --machine-type=n1-standard-4 \
+  --image=us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm \
+  --ports=8080 \
+  --health-route=/ping \
+  --predict-route=/predictions/lstm
+
+  curl -d '{"data":"Finished with project data cleaning"}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/getting_started_pytorch/versions/v1:predict
