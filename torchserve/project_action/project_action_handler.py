@@ -20,7 +20,7 @@ class ModelHandler(BaseHandler):
     #spell_checker = SpellChecker()
   	#sentence_lst = cleaned_sentence.split()
   	num_words = len(sentence_lst)
-  	sentence_vector = np.zeros((max_len,300))
+  	sentence_vector = np.zeros((10,300))
   	for i in range(num_words):
       vectorized_word = np.zeros(300)
     	sentence_vector[i] = vectorized_word
