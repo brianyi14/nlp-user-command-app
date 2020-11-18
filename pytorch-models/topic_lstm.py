@@ -1,9 +1,6 @@
-import torch
-from torch import nn
-
-class ProjectActionModel(nn.Module):
+class TopicModel(nn.Module):
   def __init__(self):
-    super(ProjectActionModel,self).__init__()
+    super(TopicModel,self).__init__()
     self.lstm = nn.LSTM(300,100,batch_first = True)
     self.outputtopic = nn.Linear(100,5)
     self.softmax = nn.LogSoftmax(dim=-1)

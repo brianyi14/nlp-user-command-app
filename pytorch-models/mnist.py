@@ -2,7 +2,6 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -26,4 +25,20 @@ class Net(nn.Module):
         x = self.fc2(x)
         output = F.log_softmax(x, dim=1)
         return output
+        
+import torch 
+from torch import nn
+
+class TopicModeler(nn.Module):
+  	def __init__(self):
+    	super(TopicModeler,self).__init__()
+    	self.LSTM = nn.LSTM(300,100,batch_first = True)
+    	self.output2topic = nn.Linear(100,5) 
+    	self.softmax = nn.LogSoftmax(dim=-1)
+
+  	def forward(self,input):
+    	output, (h_n,c_n) = self.LSTM(input)
+    	topic_output = self.output2topic(h_n)
+    	prob_output = self.softmax(topic_output)
+    	return prob_output
         
