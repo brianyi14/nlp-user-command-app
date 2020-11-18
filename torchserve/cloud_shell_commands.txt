@@ -16,7 +16,7 @@ gcloud beta artifacts repositories create getting-started-pytorch \
 cat > Dockerfile <<END
 FROM pytorch/torchserve:0.2.0-cpu
 
-COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py sentence_vectorizer.py configuration.properties requirements.txt /home/model-server/
+COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py /home/model-server/
 
 
 RUN torch-model-archiver \
@@ -25,8 +25,7 @@ RUN torch-model-archiver \
   --model-file=/home/model-server/project_action_lstm.py \
   --serialized-file=/home/model-server/project_action_trained.pt \
   --handler=/home/model-server/project_action_handler.py \
-  --export-path=/home/model-server/model-store \
-  --extra-files=/home/model-server/sentence_vectorizer.py
+  --export-path=/home/model-server/model-store 
 
 CMD ["torchserve", \
      "--start", \ 
@@ -61,7 +60,7 @@ curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1
 curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1&number_gpu=1&synchronous=true
   
-curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/predictions/lstm
+curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
 
 docker push us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 

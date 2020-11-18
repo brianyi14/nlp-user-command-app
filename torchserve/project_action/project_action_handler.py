@@ -1,11 +1,8 @@
 from ts.torch_handler.base_handler import BaseHandler
 import torch
-#from sentence_vectorizer import vectorize_sentence
-
 
 class ModelHandler(BaseHandler):
   def preprocess(self, data):
-	  #sentence = data.get("data")
   	return torch.zeros(1,10,300).float()
 
   def postprocess(self, model_pred):
