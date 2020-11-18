@@ -26,12 +26,11 @@ RUN torch-model-archiver \
   --serialized-file=/home/model-server/project_action_trained.pt \
   --handler=/home/model-server/project_action_handler.py \
   --export-path=/home/model-server/model-store \
-  --requirements-file=/home/model-server/requirements.txt \
   --extra-files=/home/model-server/sentence_vectorizer.py
 
 CMD ["torchserve", \
      "--start", \ 
-     "--ts-config=/home/model-server/configuration.properties", \
+     "--ts-config=/home/model-server/config.properties", \
      "--models", \
      "lstm=lstm.mar"]
      
@@ -46,7 +45,7 @@ docker build \
 #start the local torchserve server on ports 8080 and 8081 using the built docker container. Port
 #8080 handles client requests for model predictions. Port 8081 handles requests to change model
 #server parameters 
-docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
+docker run -d -p 8080:8080 --name=local_lstm \
   us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 
 
