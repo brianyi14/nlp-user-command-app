@@ -24,8 +24,8 @@ class ModelHandler(BaseHandler):
   	for i in range(num_words):
       vectorized_word = np.zeros(300)
     	sentence_vector[i] = vectorized_word
-  		for j in range(num_words,max_len,1):
-    		sentence_vector[j] = np.zeros(300)
+  	for j in range(num_words,10,1):
+    	sentence_vector[j] = np.zeros(300)
     tensor_sentence = torch.tensor(sentence_vector)
     model_input = torch.unsqueeze(tensor_sentence,0)
     model_input = model_input.float()
