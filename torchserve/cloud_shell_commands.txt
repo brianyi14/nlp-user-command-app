@@ -16,7 +16,7 @@ gcloud beta artifacts repositories create getting-started-pytorch \
 cat > Dockerfile <<END
 FROM pytorch/torchserve:0.2.0-cpu
 
-COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py /home/model-server/
+COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py configuration.properties requirements.txt /home/model-server/
 
 
 RUN torch-model-archiver \
@@ -25,11 +25,12 @@ RUN torch-model-archiver \
   --model-file=/home/model-server/project_action_lstm.py \
   --serialized-file=/home/model-server/project_action_trained.pt \
   --handler=/home/model-server/project_action_handler.py \
-  --export-path=/home/model-server/model-store 
+  --export-path=/home/model-server/model-store \
+  --requirements-file=/home/model-server/requirements.txt
 
 CMD ["torchserve", \
      "--start", \ 
-     "--ts-config=/home/model-server/config.properties", \
+     "--ts-config=/home/model-server/configuration.properties", \
      "--models", \
      "lstm=lstm.mar"]
      
