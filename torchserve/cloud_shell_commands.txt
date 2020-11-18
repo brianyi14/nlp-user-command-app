@@ -2,7 +2,7 @@
 git clone https://github.com/brianyi14/nlp-user-command-app
 
 #change directory to access cloned files
-cd nlp-user-command-app/pytorch-models
+cd nlp-user-command-app/torchserve
 
 #create Google Cloud artifact repository which will contain models
 gcloud beta artifacts repositories create getting-started-pytorch \
@@ -45,7 +45,7 @@ docker build \
 #start the local torchserve server on ports 8080 and 8081 using the built docker container. Port
 #8080 handles client requests for model predictions. Port 8081 handles requests to change model
 #server parameters 
-docker run -d -p 8080:8080 --name=local_lstm \
+docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
   us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 
 
@@ -58,8 +58,8 @@ curl localhost:8080/ping
 curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 
 #set the minimum number of workers for the model so it can make predictions
-curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1
-curl -v -X PUT localhost:8081/models/lstm?min_worker=1&max_worker=1&number_gpu=1&synchronous=true
+curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2
+curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2&synchronous=true
   
 curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
 

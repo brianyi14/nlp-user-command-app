@@ -20,22 +20,7 @@ class ModelHandler(BaseHandler):
   	num_words = len(sentence_lst)
   	sentence_vector = np.zeros((max_len,300))
   	for i in range(num_words):
-		  word = sentence_lst[i]
-    	if word not in stopwords:
-      		try:
-        		vectorized_word = np.zeros(300)
-      		except KeyError:
-        		misspelled = spell_checker.unknown([word])
-        	  corrected_word = None
-        	  for word in misspelled:
-          		corrected_word = spell_checker.correction(word)
-        	  try:
-          		vectorized_word = np.zeros(300)
-        	  except KeyError:
-          		vectorized_word = np.zeros(300)
-    	else:
-      	#stop word is empty vector of 0s
-      	vectorized_word = np.zeros(300)
+      vectorized_word = np.zeros(300)
     	sentence_vector[i] = vectorized_word
   		for j in range(num_words,max_len,1):
     		sentence_vector[j] = np.zeros(300)
