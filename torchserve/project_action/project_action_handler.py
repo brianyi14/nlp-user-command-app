@@ -29,7 +29,7 @@ class ModelHandler(BaseHandler):
     tensor_sentence = torch.tensor(sentence_vector)
     model_input = torch.unsqueeze(tensor_sentence,0)
     model_input = model_input.float()
-    return [model_input]
+    return model_input
 
   def postprocess(self, model_pred):
     index2label = {0: 'Create',1: 'On Target',2: 'At Risk',3: 'Danger',4: 'Completed'}
