@@ -1,0 +1,180 @@
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+x is done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+task x is done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x task is done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x was done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+task x was done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x task was done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+task x finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x task finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x is finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+task x is finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x task is finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+task x was finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x task was finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+end task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+end x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ending task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ending x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ended task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ended x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+conclude task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+conclude x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluding task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluding x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluded task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluded x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+x to do,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+to do x,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+new x,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+make x,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+create x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+add x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+generate x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+design x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+plan x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+project x to do,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+x project to do,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+to do project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+to do x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",to do
+new project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+new x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",new
+make project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+make x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+create project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+create x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+add project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+add x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+generate project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generate x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+design project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+design x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+plan project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+plan x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+making x,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+making project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+making x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+made x ,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+made project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+made x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",make
+creating x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+creating project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+creating x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+created x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+created project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+created x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",create
+adding x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+adding project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+adding x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+added x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+added project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+added x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",add
+generating x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generating project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generating x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generated x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generated project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+generated x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",generate
+designing x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+designing project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+designing x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+designed x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+designed project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+designed x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",design
+planning x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+planning project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+planning x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+planned x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+planned project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+planned x project,Project,x,Create,"[0,1]","[1,0,0,0,0]",plan
+x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+on target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+project x is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x project is on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x was on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+project x was on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+x project was on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on target
+project x on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x project on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project x is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x project is on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x was on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+x project was on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project x was on schedule,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on schedule
+project x on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project is on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x was on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x was on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project was on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project is back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x was back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+project x was back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x project was back on track,Project,x,On Target,"[0,1]","[0,1,0,0,0]",on track
+x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+at risk x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x is behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x is delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+task x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+task x has been executed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x task executed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end of task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end of task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+finished task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+complete task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x complete task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completed task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completed x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+do x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+run project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+do project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x do the project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x create a project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x add project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x generate a project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x create project,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+made x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x project generation,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x design,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+design of project x,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x project design,Project,x,Create,"[0,1]","[1,0,0,0,0]",BACKTRANSLATED
+x is achieving the goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x is going well,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x is back in orbit,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+target project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x aiming for the project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+target x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project x is achieving its goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x project is achieving its goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x achieved the goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+project x has achieved its goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x project has achieved its goal,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x scheduled project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x was going well,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x the project was going well,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x project got off to a good start,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x delay,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED

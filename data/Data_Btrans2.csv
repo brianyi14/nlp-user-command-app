@@ -1,0 +1,181 @@
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+reviewed task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+reviewed x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",review
+check task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+check x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checking task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checking x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checked task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checked x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+check over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+check over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checking over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checking over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checked over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+checked over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",check
+look over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+look over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looking over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looking over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looked over task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looked over x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looking at task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looking at x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looked at task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+looked at x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",look
+examine task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+examine x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+examining task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+examining x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+examined task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+examined x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",examine
+inspect task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+inspect x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+inspecting task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+inspecting x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+inspected task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+inspected x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",inspect
+fix task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+fix x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+fixing task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+fixing x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+fixed task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+fixed x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",fix
+x blocked,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",block
+x is blocked,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",block
+block x,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",block
+stop x,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",stop
+close x,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",close
+pause x,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",pause
+shut down x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",shut down
+delay x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+task x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+x task blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+task x is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+x task is blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+task x was blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+x task was blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+block task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+block x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+blocking task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+blocking x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+blocked task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+blocked x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",block
+stop task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+stop x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+stopping task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+stopping x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+stopped task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+stopped x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",stop
+close task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+close x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+closing task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+closing x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+closed task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+closed x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",close
+pause task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+pause x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+pausing task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+pausing x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+paused task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+paused x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",pause
+shut down task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",shut down
+shut down x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",shut down
+shutting down task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",shut down
+shutting down x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",shut down
+delay task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+delay x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+delaying task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+delaying x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+delayed task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+delayed x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",delay
+x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+finish x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x is finished,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x is done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+end x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",end
+conclude x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+task x complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task is completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task was complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+task x was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x task was completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completed task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completed x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completing task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completing x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+finish task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing with task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing with x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished with task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished with x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+task x done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x task done,Task,x,Completed,"[1,0]","[0,0,0,0,1]",done
+confirmed task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x confirmed the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x check the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x task check,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x check tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x check task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+overlooking task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x overlooking the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x watching task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+i saw task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x saw the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+look at task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x look at the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x examine the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+investigated task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x inspected the task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x inspect tasks,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+inspection of task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x task inspection,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x fix task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x task fix,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x block,Task,x,Blocked,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+task x block,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x task block,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x stop the task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x stop task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+task x has stopped,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x task stopped,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x close task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x pause task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x shut down the task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+shutdown task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x task shutdown,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+task x delay,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x task delay,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+end with x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+conclusion x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x complete task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completed x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completion of task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x task completion,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end of task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end with task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end with task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED

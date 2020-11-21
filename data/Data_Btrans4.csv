@@ -1,0 +1,172 @@
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+at risk project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+at risk x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+project x is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x project is at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x was at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+project x was at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+x project was at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",at risk
+project x behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x project behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+project x is behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x project is behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x was behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+project x was behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+x project was behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",behind schedule
+project x delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x project delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+project x is delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x project is delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x was delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+project x was delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x project was delayed,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",delay
+x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+problem with x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem with
+emergency with x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",emergency with
+block x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+stop x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+pause x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+project x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+x project danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+danger x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+project x is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+x project is in danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",danger
+problem with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem with
+problem with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",problem with
+emergency with project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",emergency with
+emergency with x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",emergency with
+block project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+block x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocking x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocking project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocking x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocked x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocked project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+blocked x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",block
+stop project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stop x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopping x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopping project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopping x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopped x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopped project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+stopped x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",stop
+pause project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+pause x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+pausing x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+pausing project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+pausing x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+paused x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+paused project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+paused x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",pause
+x complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x is complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+finish x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x is finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x is done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+end x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+conclude x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+project x complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project x completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project x is complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project is complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project x is completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project is completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project x was complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project was complete,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+project x was completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+x project was completed,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+complete x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completed project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completed x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completing project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+completing x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",complete
+finish project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finish with x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing with project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finishing with x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished with project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+finished with x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+project x done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x project done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+project x is done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x project is done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x was done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+project x was done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+x project was done,Project,x,Completed,"[1,0]","[0,0,0,0,1]",done
+project x finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x project finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+project x is finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x project is finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+project x was finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+x project was finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",finish
+end project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+end x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ending project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ending x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ended project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+ended x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",end
+conclude project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+conclude x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluding project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluding x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluded project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+concluded x project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",conclude
+x risky projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+risky projects x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+risky x projects,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project x was in jeopardy,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x the project was at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x the project was behind schedule,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project x delay,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+project x is late,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x project is late,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x is at risk,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x problem,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+urgent with x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x project hazards,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project x problem,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x project issues,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project x emergency,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x project emergency,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project x block,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x project block,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x stop the project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x the project is stopped,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project x has stopped,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x the project has stopped,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x pause the project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+project pause x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+end with x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+conclusion x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completion of project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x project completion,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+exit project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x exit the project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x project finish,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end with project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end with project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+project end x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+end of project x,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x end of project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+project x has finished,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x the project has ended,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x complete the project,Project,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
