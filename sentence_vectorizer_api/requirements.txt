@@ -1,4 +1,6 @@
-google-endpoints==4.8.0
-google-endpoints-api-management==1.11.1
+numpy
 gensim
 pyspellchecker
+json
+flask 
+flask_cors
