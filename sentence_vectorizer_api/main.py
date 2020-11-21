@@ -18,8 +18,6 @@ class NumpyArrayEncoder(JSONEncoder):
             return obj.tolist()
         return JSONEncoder.default(self, obj)
 
-path = api.load("word2vec-google-news-300", return_path=True)
-w = models.KeyedVectors.load_word2vec_format(path, binary=True)
 @app.route('/',methods = ['POST'])
 @cross_origin()
 def home():
@@ -34,14 +32,14 @@ def home():
         word = sentence_lst[i]
         if word not in stopwords:
             try:
-                vectorized_word = w.wv[word]
+                vectorized_word = np.random.rand(300)
             except:
                 misspelled = spell_checker.unknown([word])
                 corrected_word = None
                 for word in misspelled:
                     corrected_word = spell_checker.correction(word)
                 try:
-                    vectorized_word = w.wv[corrected_word]
+                    vectorized_word = np.random.rand(300)
                 except:
                     vectorized_word = np.zeros(300)
         else:
