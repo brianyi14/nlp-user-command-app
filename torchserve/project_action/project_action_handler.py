@@ -8,7 +8,7 @@ class ModelHandler(BaseHandler):
   def preprocess(self, data):
 	request_data = data.loads(data)
 	text_command = request_data['command']
-	payload = {"command":sentence}
+	payload = {"command":text_command}
 	r = requests.post("user-command-nlp.ue.r.appspot.com", data = payload)
 	response = r.json()
 	encodedNumpyData = response['array']
