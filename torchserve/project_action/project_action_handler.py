@@ -6,16 +6,13 @@ import json
 
 class ModelHandler(BaseHandler):
   def preprocess(self, data):
-	request_data = data.loads(data)
-	print(request_data)
-	text_command = request_data['command']
-	print(text_command)
-	payload = {"command":text_command}
-	r = requests.post("user-command-nlp.ue.r.appspot.com", data = payload)
-	response = r.json()
-	encodedNumpyData = response['array']
-	sentence_vector = json.loads(encodedNumpyData)
-	sentence_vector = np.asarray(sentence_vector["array"])
+	request_data = json.loads(data)
+    text_command = request_data['command']
+    payload = {'command':text_command}
+    r = requests.post("https://user-command-nlp.ue.r.appspot.com", json = payload)
+    response = r.json()
+    encodedNumpyData = response['array']
+    sentence_vector = np.asarray(encodedNumpyData)
     tensor_sentence = torch.tensor(sentence_vector)
     model_input = torch.unsqueeze(tensor_sentence,0)
     model_input = model_input.float()
