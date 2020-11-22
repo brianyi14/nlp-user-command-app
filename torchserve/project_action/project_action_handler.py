@@ -6,7 +6,8 @@ import json
 
 class ModelHandler(BaseHandler):
   def preprocess(self, data):
-	sentence = data.get("data")
+	request_data = data.loads(data)
+	text_command = request_data['command']
 	payload = {"command":sentence}
 	r = requests.post("user-command-nlp.ue.r.appspot.com", data = payload)
 	response = r.json()

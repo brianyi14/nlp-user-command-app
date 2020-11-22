@@ -61,7 +61,7 @@ curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2
 curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2&synchronous=true
   
-curl -d '{"data":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
+curl -d '{"command":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
 
 docker push us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 
