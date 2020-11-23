@@ -1,8 +1,5 @@
 from ts.torch_handler.base_handler import BaseHandler
 import torch
-import numpy as np
-import requests
-import json
 
 class ModelHandler(BaseHandler):
   def preprocess(self, data):
