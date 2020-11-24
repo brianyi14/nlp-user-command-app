@@ -1,6 +1,5 @@
 numpy
 gensim
 pyspellchecker
-json
 flask 
 flask_cors
