@@ -21,8 +21,7 @@ class NumpyArrayEncoder(JSONEncoder):
 
 
 vectorizer = models.KeyedVectors.load_word2vec_format(
-    "./data/google-word2vec.bin", binary=True, limit=500000)
-
+    "./data/google-word2vec.bin", binary=True)
 
 @app.route('/', methods=['POST'])
 @cross_origin()
