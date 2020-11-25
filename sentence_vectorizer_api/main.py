@@ -19,9 +19,10 @@ class NumpyArrayEncoder(JSONEncoder):
             return obj.tolist()
         return JSONEncoder.default(self, obj)
 
+path = api.load("word2vec-google-news-300", return_path=True)
 
 vectorizer = models.KeyedVectors.load_word2vec_format(
-    "./data/google-word2vec.bin", binary=True)
+    path, binary=True)
 
 
 @app.route('/', methods=['POST'])
