@@ -22,11 +22,14 @@ class ModelHandler(BaseHandler):
 		
 		def postprocess(self, model_pred):
 				index2label = {0: 'Project',1: 'Task'}
-				pred = [index2label[int(torch.argmax(model_pred,dim=-1))]]
+				pred = index2label[int(torch.argmax(model_pred,dim=-1))]
 				payload = {'command': self.text_command}
 				if pred == 'Project':
 					r = requests.post("http://localhost:8080/predictions/lstm_project_action", json = payload)
 				else:
 					r = requests.post("http://localhost:8080/predictions/lstm_task_action", json = payload)
-				print(r)
-				return [r]
+				response = r.json()
+				action_pred = response['action']
+				topic_action_pred = {'Topic': pred, 'Action': action_pred}
+				topic_action_pred = json.dumps(topic_action_pred)
+				return [topic_action_pred]

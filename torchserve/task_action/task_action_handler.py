@@ -17,4 +17,7 @@ class ModelHandler(BaseHandler):
 		
 		def postprocess(self, model_pred):
 				index2label = {0: 'To Do',1: 'In Progress',2:'In Review',3:'Blocked',4:'Completed'}
-				return [index2label[int(torch.argmax(model_pred,dim=-1))]]
+				action = index2label[int(torch.argmax(model_pred,dim=-1))]
+				pred = {'action': action}
+				pred = json.dumps(pred)
+				return [pred]
