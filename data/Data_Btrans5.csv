@@ -1,0 +1,134 @@
+Text Command,Topic,Identifier,Action,One Hot Encoded Topic,One Hot Encoded Action,Verb/Noun
+assign x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign in progress to x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+move x to in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",move
+assign task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+move task x to in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",move
+move x task to in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",move
+assign x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign in review to x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign in review to task x,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+assign in review to x task,Task,x,In Review,"[1,0]","[0,0,1,0,0]",assign
+move x to in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",move
+move task x to in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",move
+move x task to in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",move
+assign in progress to task x,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign in progress to x task,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",assign
+assign blocked to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign blocked to task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign blocked to x task,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign task x blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+assign x task blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",assign
+move x to blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",move
+move task x to blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",move
+move x task to blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",move
+assign x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+assign completed to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+assign task x completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+assign x task completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+assign completed to task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+assign completed to x task,Task,x,Completed,"[1,0]","[0,0,0,0,1]",assign
+move x to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
+move task x to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
+move x task to completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",move
+assign on target to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign on target to project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign on target to x project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign project x on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+assign x project on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",assign
+move x to on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",move
+move project x to on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",move
+move x project to on target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",move
+assign at risk to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign at risk to project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign at risk to x project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+assign x project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",assign
+move x to at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",move
+move project x to at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",move
+move x project to at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",move
+assign x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign danger to x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign project x danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign x project danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign danger to project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+assign danger to x project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",assign
+move x to danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",move
+move project x to danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",move
+move x project to danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",move
+assign completed to project x,Project,x,Completed,"[0,1]","[0,0,0,0,1]",assign
+assign completed to x project,Project,x,Completed,"[0,1]","[0,0,0,0,1]",assign
+assign project x completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",assign
+assign x project completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",assign
+move project x to completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",move
+move x project to completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",move
+assign to x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+move x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign x tasks in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+move task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+x move task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign to x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign task x under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign x task under review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign to task x in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign to x task in review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+move x to review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+move task x to review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+x move task to review,Task,x,In Review,"[1,0]","[0,0,1,0,0]",BACKTRANSLATED
+assign to task x in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign to x task in progress,Task,x,In Progress,"[1,0]","[0,1,0,0,0]",BACKTRANSLATED
+assign the block to x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+allocate blocked x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign the block to task x,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+assign blocked tasks to x tasks,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+task x allocation blocked,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+blocked x task assignment,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+move x to block,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+move task x to block,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+x move task to block,Task,x,Blocked,"[1,0]","[0,0,0,1,0]",BACKTRANSLATED
+allocation of x is complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+completed assignment to x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+task x assignment completed,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+allocation of completed x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+assign to completed task x,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+assign completed tasks to x tasks,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+move x to complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+move task x to complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+x move task to complete,Task,x,Completed,"[1,0]","[0,0,0,0,1]",BACKTRANSLATED
+assign target to x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign x to target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign a target to project x,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x assign a target to the project,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign project x to target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x assign the project to the target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+move x to target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+move project x to target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+x move project to target,Project,x,On Target,"[0,1]","[0,1,0,0,0]",BACKTRANSLATED
+assign risk to x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+allocate risky x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+assign risk to project x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x assign risk to the project,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+put project x at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x put your project at risk,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+endanger x,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+move project x to a risky location,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x move the project to a risky location,Project,x,At Risk,"[0,1]","[0,0,1,0,0]",BACKTRANSLATED
+x assign danger,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+assign project x risk,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x assign project risk,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x assign risks to projects,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+move x dangerously,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+endanger project x,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+x endanger the project,Project,x,Danger,"[0,1]","[0,0,0,1,0]",BACKTRANSLATED
+completed assignment to project x,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+assign to a completed x project,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+project x allocation complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+x project allocation completed,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+move project x to complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
+x move project to complete,Project,x,Completed,"[0,1]","[0,0,0,0,1]",BACKTRANSLATED
