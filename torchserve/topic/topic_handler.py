@@ -1,13 +1,32 @@
 from ts.torch_handler.base_handler import BaseHandler
 import torch
-from sentence_vectorizer import vectorize_sentence
-
+import numpy
+import requests
+import json
 
 class ModelHandler(BaseHandler):
-  def preprocess(self, data):
-  	sentence = data.get("data")
-  	return sentence_vectorizer(sentence)
-
-  def postprocess(self, model_pred):
-    index2label = {0: 'Task',1: 'Project'}
-    return [index2label[int(torch.argmax(model_pred,dim=-1))]]
+		def preprocess(self, data):
+				request_data = data[0]
+				request_data = request_data['body']
+				text_command = request_data['command']
+				payload = {'command':text_command}
+				r = requests.post("https://user-command-nlp.ue.r.appspot.com", json = payload)
+				response = r.json()
+				encodedNumpyData = response['array']
+				self.text_command = encodedNumpyData
+				sentence_vector = numpy.asarray(encodedNumpyData)
+				tensor_sentence = torch.tensor(sentence_vector)
+				model_input = torch.unsqueeze(tensor_sentence,0)
+				model_input = model_input.float()
+				return model_input
+		
+		def postprocess(self, model_pred):
+				index2label = {0: 'Project',1: 'Task'}
+				pred = [index2label[int(torch.argmax(model_pred,dim=-1))]]
+				payload = {'command': self.text_command}
+				if pred == 'Project':
+					r = requests.post("http://localhost:8080/predictions/lstm_project_action", json = payload)
+				else:
+					r = requests.post("http://localhost:8080/predictions/lstm_task_action", json = payload)
+				print(r)
+				return [r]

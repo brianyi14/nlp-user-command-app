@@ -53,15 +53,19 @@ docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
 #ping the server which tells you whether there is something wrong with the archived model.
 #An unhealthy response means there is some error in one of the files supplied to the model 
 #archiver. A healthy response means the files are correctly formatted. 
-curl localhost:8080/ping
+curl http://localhost:8080/ping
 
 curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 
 #set the minimum number of workers for the model so it can make predictions
-curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2
-curl -v -X PUT localhost:8081/models/lstm?min_worker=2&max_worker=2&synchronous=true
+curl -v -X PUT localhost:8081/models/lstm?min_worker=2
+curl -v -X PUT http://localhost:8081/models/lstm?min_worker=2&synchronous=true
   
-curl -d '{"command":"Finished with project data cleaning"}' -H "Content-Type: application/json" -X POST localhost:8080/predictions/lstm
+curl -d {"command":"Finished with project data cleaning"} -H "Content-Type: application/json" -X POST http://localhost:8080/predictions/lstm
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"command":"Project data cleaning is at risk"}'  \
+  localhost:8080/predictions/lstm_topic
 
 docker push us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
 
@@ -76,3 +80,12 @@ gcloud beta ai-platform versions create v1 \
   --predict-route=/predictions/lstm
 
   curl -d '{"data":"Finished with project data cleaning"}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/getting_started_pytorch/versions/v1:predict
+
+  torch-model-archiver --force --model-name lstm_project_action --version 1.0 --model-file ./project_action/project_action_lstm.py --serialized-file ./project_action/project_action_trained.pt --export-path model_store --handler ./project_action/project_action_handler.py --requirements-file requirements.txt
+  torchserve --start --ncs --model-store model_store --models lstm_project_action.mar --ts-config configuration.properties
+
+  torch-model-archiver --force --model-name lstm_task_action --version 1.0 --model-file ./task_action/task_action_lstm.py --serialized-file ./task_action/task_action_trained.pt --export-path model_store --handler ./task_action/task_action_handler.py --requirements-file requirements.txt
+  torchserve --start --ncs --model-store model_store --models lstm_task_action.mar --ts-config configuration.properties
+
+  torch-model-archiver --force --model-name lstm_topic --version 1.0 --model-file ./topic/topic_lstm.py --serialized-file ./topic/topic_trained.pt --export-path model_store --handler ./topic/topic_handler.py --requirements-file requirements.txt
+  torchserve --start --ncs --model-store model_store --models lstm_task_action.mar lstm_topic.mar --ts-config configuration.properties
