@@ -21,7 +21,7 @@ class ModelHandler(BaseHandler):
 				return model_input
 		
 		def postprocess(self, model_pred):
-				index2label = {0: 'Project',1: 'Task'}
+				index2label = {1: 'Project',0: 'Task'}
 				pred = index2label[int(torch.argmax(model_pred,dim=-1))]
 				payload = {'command': self.text_command}
 				if pred == 'Project':
