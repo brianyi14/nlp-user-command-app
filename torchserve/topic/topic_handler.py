@@ -25,9 +25,9 @@ class ModelHandler(BaseHandler):
 				pred = index2label[int(torch.argmax(model_pred,dim=-1))]
 				payload = {'command': self.text_command}
 				if pred == 'Project':
-					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/project-action/versions/v1:predict", json = payload)
+					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/project_action/versions/v1:predict", json = payload)
 				else:
-					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task-action/versions/v1:predict", json = payload)
+					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task_action/versions/v1:predict", json = payload)
 				response = r.json()
 				action_pred = response['action']
 				topic_action_pred = {'Topic': pred, 'Action': action_pred}
