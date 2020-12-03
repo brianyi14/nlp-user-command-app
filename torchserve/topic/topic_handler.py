@@ -26,9 +26,9 @@ class ModelHandler(BaseHandler):
 				payload = {'command': self.text_command}
 				header = {'Authorization': 'Bearer ya29.a0AfH6SMBFzv0VcXiEULX0sR4BOj02oOxmP1Jd4Ctlc2hqJP9jkZrzJJp2gFBtvoSVZhVp-FiO7gADDfh8R8pjhuPWE7UErMeBldaI4KU0RV-0Gch09c0s31fnSStS3eCx7O0a23BnjJCXW29vpz0vS6bfQl8g-DCV2hH6m4NMZjr9UqbDg5tUPn5S44gcH9Ijwlb4Np-uTDohziAWsQLWoa6bvjfN5g_Z2awdZvjsZwI3A4pSqL8inWeBEOHzxNc5dOfNhv6fbmv_1tv-OWVKBA'}
 				if pred == 'Project':
-					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/project_action/versions/v1:predict", json = payload,headers=header)
+					r = requests.post("http://localhost:8080/predictions/lstm_project_action", json = payload,headers=header)
 				else:
-					r = requests.post("https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task_action/versions/v1:predict", json = payload,headers=header)
+					r = requests.post("http://localhost:8080/predictions/lstm_task_action", json = payload,headers=header)
 				response = r.json()
 				action_pred = response['action']
 				topic_action_pred = {'Topic': pred, 'Action': action_pred}

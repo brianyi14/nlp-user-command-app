@@ -5,7 +5,7 @@ git clone https://github.com/brianyi14/nlp-user-command-app
 cd nlp-user-command-app/torchserve
 
 #create Google Cloud artifact repository which will contain models
-gcloud beta artifacts repositories create getting-started-pytorch \
+gcloud beta artifacts repositories create task-action \
  --repository-format=docker \
  --location=us-east1
 
@@ -16,15 +16,15 @@ gcloud beta artifacts repositories create getting-started-pytorch \
 cat > Dockerfile <<END
 FROM pytorch/torchserve:0.2.0-cpu
 
-COPY project_action/project_action_lstm.py project_action/project_action_trained.pt project_action/project_action_handler.py configuration.properties requirements.txt /home/model-server/
+COPY task_action/task_action_lstm.py task_action/task_action_trained.pt task_action/task_action_handler.py configuration.properties requirements.txt /home/model-server/
 
 
 RUN torch-model-archiver \
   --model-name=lstm \
   --version=1.0 \
-  --model-file=/home/model-server/project_action_lstm.py \
-  --serialized-file=/home/model-server/project_action_trained.pt \
-  --handler=/home/model-server/project_action_handler.py \
+  --model-file=/home/model-server/task_action_lstm.py \
+  --serialized-file=/home/model-server/task_action_trained.pt \
+  --handler=/home/model-server/task_action_handler.py \
   --export-path=/home/model-server/model-store \
   --requirements-file=/home/model-server/requirements.txt
 
@@ -39,14 +39,14 @@ END
 
 #build the docker container using the supplied Dockerfile
 docker build \
-  --tag=us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm \
+  --tag=us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm \
   .
 
 #start the local torchserve server on ports 8080 and 8081 using the built docker container. Port
 #8080 handles client requests for model predictions. Port 8081 handles requests to change model
 #server parameters 
 docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
-  us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
+  us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm
 
 
 
@@ -61,25 +61,30 @@ curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
 curl -v -X PUT localhost:8081/models/lstm?min_worker=2
 curl -v -X PUT http://localhost:8081/models/lstm?min_worker=2&synchronous=true
   
-curl -d {"command":"Finished with task data cleaning"} -H "Content-Type: application/json" -X POST http://localhost:8080/predictions/lstm
+curl -d '{"test":1}' -H "Content-Type: application/json" -X POST http://localhost:8080/predictions/lstm
 curl --header "Content-Type: application/json" \
   --request POST \
-  --data '{"command":"Finished with task data cleaning"}'  \
-  localhost:8080/predictions/lstm_topic
+  --data '{"command":"Task data cleaning is in progress"}'  \
+  https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/project_action/versions/v1:predict
 
-docker push us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm
+docker push us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm
+
+gcloud beta ai-platform models create task_action \
+  --region=us-east1 \
+  --enable-logging \
+  --enable-console-logging
 
 
 gcloud beta ai-platform versions create v1 \
   --region=us-east1 \
-  --model=getting_started_pytorch \
+  --model=task_action \
   --machine-type=n1-standard-4 \
-  --image=us-east1-docker.pkg.dev/user-command-nlp/getting-started-pytorch/serve-lstm \
+  --image=us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm \
   --ports=8080 \
   --health-route=/ping \
   --predict-route=/predictions/lstm
 
-  curl -d '{"data":"Finished with project data cleaning"}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/getting_started_pytorch/versions/v1:predict
+  curl -d '{"test":1}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task_action/versions/v1:predict
 
   torch-model-archiver --force --model-name lstm_project_action --version 1.0 --model-file ./project_action/project_action_lstm.py --serialized-file ./project_action/project_action_trained.pt --export-path model_store --handler ./project_action/project_action_handler.py --requirements-file requirements.txt
   torchserve --start --ncs --model-store model_store --models lstm_project_action.mar --ts-config configuration.properties
@@ -88,4 +93,17 @@ gcloud beta ai-platform versions create v1 \
   torchserve --start --ncs --model-store model_store --models lstm_task_action.mar --ts-config configuration.properties
 
   torch-model-archiver --force --model-name lstm_topic --version 1.0 --model-file ./topic/topic_lstm.py --serialized-file ./topic/topic_trained.pt --export-path model_store --handler ./topic/topic_handler.py --requirements-file requirements.txt
-  torchserve --start --ncs --model-store model_store --models lstm_topic.mar --ts-config configuration.properties
+  torchserve --start --ncs --model-store model_store --models lstm_topic.mar lstm_task_action.mar lstm_project_action.mar --ts-config configuration.properties
+
+  gcloud ai-platform versions delete v1 \
+  --region=us-east1 \
+  --model=task_action \
+  --quiet
+
+  gcloud ai-platform models delete task_action \
+  --region=us-east1 \
+  --quiet
+
+  gcloud beta artifacts repositories delete task-action \
+  --location=us-east1 \
+  --quiet
