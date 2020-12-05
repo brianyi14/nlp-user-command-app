@@ -18,15 +18,45 @@ class Slinger extends Component {
     {
         e.preventDefault();
         const time = new Date().toLocaleTimeString();
-        const text = e.target.value;
+        let text = e.target.value;
+        let s = "";
+        var char;
+        for (char of text)
+        {
+            if(char === '"')
+            {
+                s = s + '|'
+            }
+            else
+            {
+                s = s + char
+            }
+        }
+        text = s;
         axios.post("http://localhost:8080/predictions/lstm_topic",{command:text},{headers:{'Content-Type':'application/json'}}).then((response) => {
             const topic = response.data.Topic;
             const action = response.data.Action;
-            const identifier = "NLP-user-command-app"
-            const command = `😊  ${topic} ${identifier} successfully moved to ${action}`;
+            const identifier = response.data.Identifier;
+            let command;
+            if (action === 'Create' || action === 'To Do')
+            {
+                command = `😊  Successfully created ${topic} ${identifier} `;
+            }
+            else
+            {
+                command = `😊  ${topic} ${identifier} successfully moved to ${action}`;
+            }
             const newhistory = this.state.history + command + ' ' + '\n' + time + '\n';
             this.setState({history:newhistory,command:""});
-            this.props.updateProjects({name:identifier,status:action})
+            if (action == 'Create')
+            {
+                this.props.addProject({name:identifier})
+            }
+            else
+            {
+                const result = this.props.updateProjects({name:identifier,status:action})
+                if (result)
+            }
 
           }, (error) => {
             const command = '🙁  Something went wrong with the server';
