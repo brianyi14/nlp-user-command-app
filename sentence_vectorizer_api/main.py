@@ -35,7 +35,7 @@ def home():
     sentence = data['command']
     cleaned_sentence = ''
     for char in sentence:
-        if char.isalpha() or char == ' ':
+        if char.isalpha() or char == ' ' or char == '|':
             cleaned_sentence += char
         if char == '-':
             cleaned_sentence += ' '
