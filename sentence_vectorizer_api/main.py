@@ -23,11 +23,6 @@ class NumpyArrayEncoder(JSONEncoder):
 vectorizer = models.KeyedVectors.load_word2vec_format(
     "./data/google-word2vec.bin", binary=True)
 
-word_vectors = vectorizer.wv
-word_vectors.save("word2vec.wordvectors")
-
-vectorizer =models.KeyedVectors.load("word2vec.wordvectors", mmap='r')
-
 @app.route('/', methods=['POST'])
 @cross_origin()
 def home():
