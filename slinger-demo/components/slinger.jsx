@@ -41,22 +41,45 @@ class Slinger extends Component {
             if (action === 'Create' || action === 'To Do')
             {
                 command = `😊  Successfully created ${topic} ${identifier} `;
+                if (action === 'Create')
+                {
+                    this.props.addProject({name:identifier});
+                }
+                else
+                {
+                    this.props.addTask(identifier);
+                }
             }
+
             else
             {
-                command = `😊  ${topic} ${identifier} successfully moved to ${action}`;
+                if (topic ===  'Project')
+                {
+                const result = this.props.updateProjects({name:identifier,status:action})
+                if (result === 0)
+                {
+                    command = `🙁  Sorry ${topic} "${identifier}" doesn't exist`;
+                }
+                else
+                {
+                    command = `😊  Successfully moved ${topic} "${identifier}" to ${action} `;
+                }
+                }
+                else
+                {
+                    const result = this.props.updateTasks({name:identifier,status:action})
+                    if (result === 0)
+                {
+                    command = `🙁  Sorry ${topic} "${identifier}" doesn't exist`;
+                }
+                else
+                {
+                    command = `😊  Successfully moved ${topic} "${identifier}" to ${action} `;
+                }
+                }
             }
             const newhistory = this.state.history + command + ' ' + '\n' + time + '\n';
             this.setState({history:newhistory,command:""});
-            if (action == 'Create')
-            {
-                this.props.addProject({name:identifier})
-            }
-            else
-            {
-                const result = this.props.updateProjects({name:identifier,status:action})
-                if (result)
-            }
 
           }, (error) => {
             const command = '🙁  Something went wrong with the server';
