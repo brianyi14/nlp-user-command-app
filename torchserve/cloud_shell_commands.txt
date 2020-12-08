@@ -65,7 +65,7 @@ curl -d '{"test":1}' -H "Content-Type: application/json" -X POST http://localhos
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"command":"Task data cleaning is in progress"}'  \
-  https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/project_action/versions/v1:predict
+  http://localhost:8080/predictions/lstm_topic
 
 docker push us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm
 

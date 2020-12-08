@@ -40,14 +40,30 @@ class Slinger extends Component {
             let command;
             if (action === 'Create' || action === 'To Do')
             {
-                command = `😊  Successfully created ${topic} ${identifier} `;
                 if (action === 'Create')
                 {
-                    this.props.addProject({name:identifier});
+                    const result = this.props.addProject({name:identifier});
+                    if (result === 1)
+                    {
+                        command = `😊  Successfully created ${topic} ${identifier} `;
+                    }
+                    else
+                    {
+                        command = `🔒  Sorry ${topic} ${identifier} already exists`;
+                    }
+
                 }
                 else
                 {
-                    this.props.addTask(identifier);
+                    const result = this.props.addTask(identifier);
+                    if (result === 1)
+                    {
+                        command = `😊  Successfully created ${topic} ${identifier} `;
+                    }
+                    else
+                    {
+                        command = `🔒  Sorry ${topic} ${identifier} already exists`;
+                    }
                 }
             }
 
@@ -58,7 +74,7 @@ class Slinger extends Component {
                 const result = this.props.updateProjects({name:identifier,status:action})
                 if (result === 0)
                 {
-                    command = `🙁  Sorry ${topic} "${identifier}" doesn't exist`;
+                    command = `👻  Sorry ${topic} "${identifier}" doesn't exist`;
                 }
                 else
                 {
@@ -70,7 +86,7 @@ class Slinger extends Component {
                     const result = this.props.updateTasks({name:identifier,status:action})
                     if (result === 0)
                 {
-                    command = `🙁  Sorry ${topic} "${identifier}" doesn't exist`;
+                    command = `👻  Sorry ${topic} "${identifier}" doesn't exist`;
                 }
                 else
                 {
@@ -82,7 +98,7 @@ class Slinger extends Component {
             this.setState({history:newhistory,command:""});
 
           }, (error) => {
-            const command = '🙁  Something went wrong with the server';
+            const command = '👾  Something went wrong with the server';
             const newhistory = this.state.history + command + ' ' + '\n' + time + '\n';
             this.setState({history:newhistory,command:""})
           });

@@ -7,7 +7,7 @@ import Slinger from '../components/slinger';
 import {Route,Switch,Redirect} from 'react-router-dom';
 
 class Website extends Component {
-    state = {projects:[],todo:['Market Research'],inprogress:[],inreview:[],blocked:[],completed:[],tasks:{'Market Research':'todo'},actions:{'To Do':'todo','In Progress':'inprogress','In Review':'inreview','Blocked':'blocked','Completed':'completed'}}
+    state = {projects:[],todo:[],inprogress:[],inreview:[],blocked:[],completed:[],tasks:{'Market Research':'todo'},actions:{'To Do':'todo','In Progress':'inprogress','In Review':'inreview','Blocked':'blocked','Completed':'completed'}}
     updateProjects = (status_update) =>
     {
         const projects = this.state.projects;
@@ -31,16 +31,33 @@ class Website extends Component {
         const status = 'On Target';
         const newproject ={name,status}
         const projects = this.state.projects;
-        projects.push(newproject);
-        this.setState({projects})
+        const idx = projects.findIndex(p => p.name == name);
+        if (idx === -1)
+        {
+            projects.push(newproject);
+            this.setState({projects});
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
     addTask = (taskname) =>
     {
         const newtodo = this.state.todo;
-        newtodo.push(taskname);
         const newtasks = this.state.tasks
-        newtasks[taskname] = 'todo'
-        this.setState({todo:newtodo,tasks:newtasks});
+        if (taskname in newtasks === false)
+        {
+            newtodo.push(taskname);
+            newtasks[taskname] = 'todo'
+            this.setState({todo:newtodo,tasks:newtasks});
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
     updateTasks = (status_update) =>
     {

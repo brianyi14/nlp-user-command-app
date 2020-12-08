@@ -1,9 +1,9 @@
 .icon:hover
 {
     cursor:pointer;
-    padding:4px;
+    padding:6px;
     border-radius:50%;
-    background-color:black;
-    margin-left:-4px;
-    margin-top:-4px;
+    background-color:rgb(108,114,161);
+    margin-left:-6px;
+    margin-top:-6px;
 }
