@@ -1,3 +1,4 @@
+------code for deploying PyTorch model to Google Cloud Platform-------
 #clone the github repository with pytorch files 
 git clone https://github.com/brianyi14/nlp-user-command-app
 
@@ -55,26 +56,22 @@ docker run -d -p 8080:8080 -p 8081:8081 --name=local_lstm \
 #archiver. A healthy response means the files are correctly formatted. 
 curl http://localhost:8080/ping
 
-curl -X POST "http://localhost:8081/models?url=lstm.mar&initial_workers=1"
-
-#set the minimum number of workers for the model so it can make predictions
-curl -v -X PUT localhost:8081/models/lstm?min_worker=2
-curl -v -X PUT http://localhost:8081/models/lstm?min_worker=2&synchronous=true
-  
-curl -d '{"test":1}' -H "Content-Type: application/json" -X POST http://localhost:8080/predictions/lstm
+#send a test prediction to the local server 
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"command":"Task data cleaning is in progress"}'  \
   http://localhost:8080/predictions/lstm_topic
 
+#push the docker image 
 docker push us-east1-docker.pkg.dev/user-command-nlp/task-action/serve-lstm
 
+#create the model
 gcloud beta ai-platform models create task_action \
   --region=us-east1 \
   --enable-logging \
   --enable-console-logging
 
-
+#create the model version 
 gcloud beta ai-platform versions create v1 \
   --region=us-east1 \
   --model=task_action \
@@ -84,26 +81,40 @@ gcloud beta ai-platform versions create v1 \
   --health-route=/ping \
   --predict-route=/predictions/lstm
 
-  curl -d '{"test":1}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task_action/versions/v1:predict
+#send a test prediction to the deployed model
+curl -d '{"test":1}' -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -X POST https://us-east1-ml.googleapis.com/v1/projects/user-command-nlp/models/task_action/versions/v1:predict
 
-  torch-model-archiver --force --model-name lstm_project_action --version 1.0 --model-file ./project_action/project_action_lstm.py --serialized-file ./project_action/project_action_trained.pt --export-path model_store --handler ./project_action/project_action_handler.py --requirements-file requirements.txt
-  torchserve --start --ncs --model-store model_store --models lstm_project_action.mar --ts-config configuration.properties
-
-  torch-model-archiver --force --model-name lstm_task_action --version 1.0 --model-file ./task_action/task_action_lstm.py --serialized-file ./task_action/task_action_trained.pt --export-path model_store --handler ./task_action/task_action_handler.py --requirements-file requirements.txt
-  torchserve --start --ncs --model-store model_store --models lstm_task_action.mar --ts-config configuration.properties
-
-  torch-model-archiver --force --model-name lstm_topic --version 1.0 --model-file ./topic/topic_lstm.py --serialized-file ./topic/topic_trained.pt --export-path model_store --handler ./topic/topic_handler.py --requirements-file requirements.txt
-  torchserve --start --ncs --model-store model_store --models lstm_topic.mar lstm_task_action.mar lstm_project_action.mar --ts-config configuration.properties
-
-  gcloud ai-platform versions delete v1 \
+#delete the model version
+gcloud ai-platform versions delete v1 \
   --region=us-east1 \
   --model=task_action \
   --quiet
 
-  gcloud ai-platform models delete task_action \
+#delete the model
+gcloud ai-platform models delete task_action \
   --region=us-east1 \
   --quiet
 
-  gcloud beta artifacts repositories delete task-action \
+#delete the artifact repository
+gcloud beta artifacts repositories delete task-action \
   --location=us-east1 \
   --quiet
+
+----code for running the PyTorch model on localhost server-----
+#you first need to create an archived model file .mar by running torch-model-archiver and specifying the model file, the trained model weights, and the model handler 
+#you also need to specify a requirements file which contains the names of the Python libraries that are used in the handler file
+#the three pairs of lines below create the archived package for each use case 
+
+torch-model-archiver --force --model-name lstm_project_action --version 1.0 --model-file ./project_action/project_action_lstm.py --serialized-file ./project_action/project_action_trained.pt --export-path model_store --handler ./project_action/project_action_handler.py --requirements-file requirements.txt
+torchserve --start --ncs --model-store model_store --models lstm_project_action.mar --ts-config configuration.properties
+
+torch-model-archiver --force --model-name lstm_task_action --version 1.0 --model-file ./task_action/task_action_lstm.py --serialized-file ./task_action/task_action_trained.pt --export-path model_store --handler ./task_action/task_action_handler.py --requirements-file requirements.txt
+torchserve --start --ncs --model-store model_store --models lstm_task_action.mar --ts-config configuration.properties
+
+torch-model-archiver --force --model-name lstm_topic --version 1.0 --model-file ./topic/topic_lstm.py --serialized-file ./topic/topic_trained.pt --export-path model_store --handler ./topic/topic_handler.py --requirements-file requirements.txt
+#this command starts the torchserve server. The archived package files for the models that the user wants to run on the server need to be specified along with the name 
+#of the folder in which they are located. A configuration file also needs to be specified. This configuration file includes
+#properties of the server such as the port that the server is listening on, the CORS policy, etc.
+torchserve --start --ncs --model-store model_store --models lstm_topic.mar lstm_task_action.mar lstm_project_action.mar --ts-config configuration.properties
+
+  
