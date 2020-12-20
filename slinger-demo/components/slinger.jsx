@@ -3,7 +3,7 @@ import '../css/slinger.css';
 import axios from 'axios';
 
 class Slinger extends Component {
-    state = {windowHeight:window.innerHeight,windowWidth:window.innerWidth,collapsed:true,history:"",command:""}
+    state = {windowHeight:window.innerHeight,windowWidth:window.innerWidth,collapsed:true,history:"Welcome to Slinger...type in a command and press Enter \n",command:"",startTime:null,endTime:null}
     componentDidMount()
     {
 
@@ -17,6 +17,10 @@ class Slinger extends Component {
     handleSubmit = (e) =>
     {
         e.preventDefault();
+        const d = new Date();
+        const endTime = d.getTime();
+        this.setState({endTime});
+        console.log((endTime-this.state.startTime)/1000);
         const time = new Date().toLocaleTimeString();
         let text = e.target.value;
         let s = "";
@@ -38,6 +42,12 @@ class Slinger extends Component {
             const action = response.data.Action;
             const identifier = response.data.Identifier;
             let command;
+            if (action === 'NA')
+            {
+                command = '🤔 Sorry Slinger cannot understand your command';
+            }
+            else
+            {
             if (action === 'Create' || action === 'To Do')
             {
                 if (action === 'Create')
@@ -94,6 +104,7 @@ class Slinger extends Component {
                 }
                 }
             }
+        }
             const newhistory = this.state.history + command + ' ' + '\n' + time + '\n';
             this.setState({history:newhistory,command:""});
 
@@ -107,6 +118,12 @@ class Slinger extends Component {
     }
     handleChange = (e) =>
     {
+        if (e.target.value.length === 1)
+        {
+            const d = new Date();
+            const startTime = d.getTime();
+            this.setState({startTime});
+        }
         const newvalue = e.target.value;
         this.setState({command:newvalue});
     }

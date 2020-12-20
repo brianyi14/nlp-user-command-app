@@ -7,6 +7,12 @@ class Projects extends Component {
     {
         window.addEventListener("resize", this.handleResize);
     }
+    componentWillUnmount() {
+        window.addEventListener("resize", this.handleResize);
+       } 
+    handleResize = (e) => {
+        this.setState({windowHeight:window.innerHeight,windowWidth:window.innerWidth});
+       };
     
     render() { 
         return ( 
