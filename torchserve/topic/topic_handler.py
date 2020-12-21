@@ -38,15 +38,18 @@ class ModelHandler(BaseHandler):
 					r = requests.post("http://localhost:8080/predictions/lstm_task_action", json = payload,headers=header)
 				response = r.json()
 				action_pred = response['action']
-				counter = 0
-				for i in range(len(self.text)):
-					char = self.text[i]
-					if char == '|' and counter == 0:
-						start_idx = i+1
-						counter = 1
-					if char == '|' and counter == 1:
-						end_idx = i
-				identifier = self.text[start_idx:end_idx]
+				if action_pred != 'NA':
+					counter = 0
+					for i in range(len(self.text)):
+						char = self.text[i]
+						if char == '|' and counter == 0:
+							start_idx = i+1
+							counter = 1
+						if char == '|' and counter == 1:
+							end_idx = i
+					identifier = self.text[start_idx:end_idx]
+				else:
+					identifier = 'NA'
 				topic_action_pred = {'Topic': pred, 'Action': action_pred,'Identifier': identifier}
 				topic_action_pred = json.dumps(topic_action_pred)
 				return [topic_action_pred]

@@ -21,7 +21,10 @@ class ModelHandler(BaseHandler):
 		
 		def postprocess(self, model_pred):
 				index2label = {0: 'To Do',1: 'In Progress',2:'In Review',3:'Blocked',4:'Completed'}
-				action = index2label[int(torch.argmax(model_pred,dim=-1))]
+				if float(torch.max(model_pred)) >= -0.46:
+					action = index2label[int(torch.argmax(model_pred,dim=-1))]
+				else:
+					action = 'NA'
 				pred = {'action': action}
 				pred = json.dumps(pred)
 				return [pred]
