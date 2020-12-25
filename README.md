@@ -40,12 +40,12 @@ designing a generic identifier locator that still needs to be completed.
 
 data
 -----------------------------
-Augmented_Data: Data file augmented by back-translation and synonym replacement, only 9 identifiers of similar structure and length are used as benchmarking
-Augmented_Data2: Data file augmented by back-translation and synonym replacement, over 100 identifiers of varied structure that are in market research are used;
+- Augmented_Data: Data file augmented by back-translation and synonym replacement, only 9 identifiers of similar structure and length are used as benchmarking
+- Augmented_Data2: Data file augmented by back-translation and synonym replacement, over 100 identifiers of varied structure that are in market research are used;
                  the final dataset that models are all trained upon
-Data_BtransX: Intermediary files used to augment the final data due to issues with the original automatic back-translation script
-NLP_Data: Excel file where all manual synthesis is done and organized
-data-old: Old data files
+- Data_BtransX: Intermediary files used to augment the final data due to issues with the original automatic back-translation script
+- NLP_Data: Excel file where all manual synthesis is done and organized
+- data-old: Old data files
 
 
 sentence_vectorizer_api 
