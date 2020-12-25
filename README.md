@@ -46,6 +46,7 @@ data
 - Data_BtransX: Intermediary files used to augment the final data due to issues with the original automatic back-translation script
 - NLP_Data: Excel file where all manual synthesis is done and organized
 - data-old: Old data files
+- tensors: PyTorch training and testing data 
 
 
 sentence_vectorizer_api 
