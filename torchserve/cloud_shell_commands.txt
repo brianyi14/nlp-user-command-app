@@ -59,7 +59,7 @@ curl http://localhost:8080/ping
 #send a test prediction to the local server 
 curl --header "Content-Type: application/json" \
   --request POST \
-  --data '{"command":"Task data cleaning is in progress"}'  \
+  --data '{"command":"Task |data cleaning| is in progress"}'  \
   http://localhost:8080/predictions/lstm_topic
 
 #push the docker image 
