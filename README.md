@@ -23,14 +23,15 @@ Step by step details are included in the notebook so just run through all the ce
 the NaiveBayes class test the model on predicting topic, task action, and project action in that order. Each cell outputs the testing accuracy and 
 testing average cross entropy loss per label.
 
-Topic_Modeler.ipynb
+LSTM_Models.ipynb
 ----------------------
 RUN THIS NOTEBOOK IN GOOGLE COLAB NOT IN YOUR LOCAL JUPYTER NOTEBOOK!!!!! If you want to see the data processing steps in action, you can just
 run through all the cells. However, converting all the data into vectorized numpy arrays can take ~40 min even with the Google Colab GPU. If you 
 want to test out the LSTM models as quick as possible change the Google Colab runtime to GPU. If you want to skip the data conversion process
-go straight to the cell with the comment "#loading the data can take some time so you can just load the data from saved PyTorch files". Change
-the mydrive variable to False and the cell will load the saved PyTorch data from the data folder that is in the project folder. From that point on you 
-can just run through all the cells. Make note that you will have to change parameters in some cells depending on whether you are training and testing 
+go straight to the cell with the comment "#loading the data can take some time so you can just load the data from saved PyTorch files". You need to upload the tensors
+folder that is in the data folder to the Google Drive of the account you are using to access Colab. Then you need to connect your Google Drive to the Colab
+notebook. You can do this by clicking on the folder icon in the left navigation bar and then clicking on the icon that looks like the Google Drive symbol.From 
+that point on you can just run through all the cells. Make note that you will have to change parameters in some cells depending on whether you are training and testing 
 topic or project and action. The places where you need to make changes have a red comment with """ around it. 
 
 Identifier_Model.ipynb
